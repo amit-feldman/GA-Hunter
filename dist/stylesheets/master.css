@@ -1,0 +1,7 @@
+@import "normalize.css";
+
+html {
+  font-family: "proxima-nova-soft", sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
