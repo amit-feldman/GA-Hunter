@@ -43,6 +43,10 @@
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.12.2"
   },
+  "scripts": {
+    "start": "nodemon ./server.js",
+    "test": "jasmine"
+  },
   "devDependencies": {
     "eslint": "^3.7.1",
     "eslint-config-airbnb": "^10.0.1",
