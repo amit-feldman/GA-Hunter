@@ -30,5 +30,5 @@ app.get('/', (request, response) => {
 
 const port = 3000;
 app.listen(port, () => {
-  console.log(`LISTENING on Port ${port}`);
+  console.log(`Listening on Port: ${port}`);
 });
