@@ -7,7 +7,7 @@
   "description": "General Assembly's Student Project Showcase",
   "main": "server.js",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "nodemon ./server.js",
     "test": "jasmine"
   },
   "repository": {
@@ -37,15 +37,12 @@
     "react": "^15.3.2",
     "react-cookie": "^0.4.8",
     "react-dom": "^15.3.2",
+    "react-modal": "^1.5.2",
     "superagent": "^2.3.0",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.16.2",
     "webpack-hot-middleware": "^2.12.2"
-  },
-  "scripts": {
-    "start": "nodemon ./server.js",
-    "test": "jasmine"
   },
   "devDependencies": {
     "eslint": "^3.7.1",
