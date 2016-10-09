@@ -4,6 +4,7 @@ import Item from './Item.jsx';
 const ItemList = () => {
   return (
     <Item />
+    <Item />
   )
 }
 
