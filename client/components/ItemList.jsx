@@ -8,6 +8,6 @@ const ItemList = () => {
       <Item />
     </div>
   )
-}
+};
 
 export default ItemList;

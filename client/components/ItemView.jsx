@@ -6,6 +6,6 @@ const ItemView = () => {
       ItemView
     </div>
   )
-}
+};
 
 export default ItemView;

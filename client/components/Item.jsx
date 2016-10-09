@@ -5,6 +5,6 @@ const Item = () => {
   return (
     <ItemView />
   )
-}
+};
 
 export default Item;
