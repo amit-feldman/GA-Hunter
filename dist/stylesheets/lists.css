@@ -1,0 +1,19 @@
+/*
+ * Lists
+ *
+ * Authors:
+ *          Amit Feldman
+ *          Mark Robertson
+ *          Tom Mulroy
+ *
+ * Date: October 8th, 2016
+ * Version: 0.0.1
+*/
+
+ul.list-inline {
+  display: inline;
+}
+
+.list-inline > li {
+  display: inline-block;
+}

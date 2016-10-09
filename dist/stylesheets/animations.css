@@ -1,0 +1,40 @@
+/*
+ * Animations
+ *
+ * Authors:
+ *          Amit Feldman
+ *          Mark Robertson
+ *          Tom Mulroy
+ *
+ * Date: October 8th, 2016
+ * Version: 0.0.1
+*/
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate.loop {
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  font-style: normal;
+  animation: pulse 2s infinite;
+  color: #fa4542;
+}
