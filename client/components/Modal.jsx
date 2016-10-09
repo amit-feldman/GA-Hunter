@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Modal from 'react-modal';
 
 const customStyling = {
@@ -26,16 +26,19 @@ const customStyling = {
   },
 };
 
-class ModalView extends React.Component {
+class ModalView extends Component {
   constructor() {
     super();
+
     this.state = { open: false };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
+
   openModal() {
     this.setState({ open: true });
   }
+
   closeModal() {
     this.setState({ open: false });
   }
