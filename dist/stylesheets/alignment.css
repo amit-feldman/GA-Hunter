@@ -1,0 +1,27 @@
+/*
+ * Alignment
+ *
+ * Authors:
+ *          Amit Feldman
+ *          Tom Mulroy
+ *          Mark Robertson
+ *
+ * Date: October 8th, 2016
+ * Version: 0.0.1
+*/
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}

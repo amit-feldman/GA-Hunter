@@ -1,0 +1,73 @@
+/*
+ * Navbar
+ *
+ * Authors:
+ *          Amit Feldman
+ *          Mark Robertson
+ *          Tom Mulroy
+ *
+ * Date: October 8th, 2016
+ * Version: 0.0.1
+*/
+
+.navbar {
+  line-height: 60px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  line-height: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white !important;
+  font-size: 24px;
+  margin-left: -15px;
+}
+
+.ga-logo {
+  float: left;
+  line-height: 30px;
+  margin: 15px 15px 15px 0;
+  height: 30px;
+}
+
+.navbar-dark {
+  background-color: black;
+  border-bottom: 0px;
+}
+
+.navbar ul {
+  padding: 15px 0;
+}
+
+.pipe {
+  color: white;
+}
+
+.active {
+  border-bottom: 4px solid #fa4542;
+}
+
+.navbar-dark ul a {
+  padding: 5px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: .1s ease;
+}
+
+.navbar-dark a:hover {
+  color: #696969;
+  transition: .1s ease;
+}
+
+.navbar-right {
+  float: right !important;
+  margin-right: -15px;
+}
+
+.navbar-left {
+  float: left !important;
+  margin: 0;
+}
