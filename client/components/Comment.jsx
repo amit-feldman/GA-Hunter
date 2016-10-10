@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentView from './CommentView';
+import CommentView from './CommentView.jsx';
 
 const Comment = () => {
   return (
