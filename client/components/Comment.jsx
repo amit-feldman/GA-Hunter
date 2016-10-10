@@ -1,10 +1,9 @@
 import React from 'react';
+import CommentView from './CommentView';
 
 const Comment = () => {
   return (
-    <div>
-      Dummy Comment
-    </div>
+    <CommentView />
   )
 }
 
