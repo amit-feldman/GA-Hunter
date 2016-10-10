@@ -1,8 +1,9 @@
 import React from 'react';
+import ProfileView from './ProfileView.jsx';
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <ProfileView />
   )
 }
 
