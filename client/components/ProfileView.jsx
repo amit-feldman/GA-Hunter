@@ -2,7 +2,10 @@ import React from 'react';
 
 const ProfileView = () => {
   return (
-    <div>hello from profile view</div>
+    <div id="profile">
+      <h2>Name: </h2>
+      <p>Summary: </p>
+    </div>
   )
 }
 
