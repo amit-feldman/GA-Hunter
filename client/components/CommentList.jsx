@@ -3,10 +3,12 @@ import Comment from './Comment.jsx';
 
 const CommentList = () => {
   return (
-    <Comment />
-    <Comment />
-    <Comment />
-    <Comment />
+    <div id="comment-list">
+      <Comment />
+      <Comment />
+      <Comment />
+      <Comment />
+    </div>
   )
 };
 
