@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import ProjectModalView from './ProjectModalView.jsx';
 
 const customStyling = {
   overlay: {
@@ -48,8 +49,8 @@ class ModalView extends React.Component {
           onRequestClose={this.closeModal}
           style={customStyling}
         >
-          <h1>A modal window that pops up</h1>
           <button onClick={this.closeModal}>( X )</button>
+          <ProjectModalView />
         </Modal>
       </div>
     );
