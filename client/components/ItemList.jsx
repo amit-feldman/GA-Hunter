@@ -7,7 +7,7 @@ const ItemList = () => {
       <Item />
       <Item />
     </div>
-  )
+  );
 };
 
 export default ItemList;
