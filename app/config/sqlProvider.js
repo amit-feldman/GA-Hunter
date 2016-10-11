@@ -17,7 +17,7 @@ const sqlProvider = {
     all: sql('./sql/project/all.sql'),
     find: sql('./sql/project/find.sql'),
     create: sql('./sql/project/create.sql'),
-    delete: sql('./sql/projects/delete.sql'),
+    delete: sql('./sql/project/delete.sql'),
   },
   upvotes: {
     all: sql('./sql/upvote/all.sql'),
