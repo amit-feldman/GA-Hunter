@@ -8,10 +8,11 @@ CREATE DATABASE ga_hunter;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
+  name VARCHAR(128),
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
   course VARCHAR NOT NULL,
-  created_at CURRENT_DATE
+  created_at TIMESTAMP
 );
 
 CREATE TABLE projects (
@@ -21,5 +22,5 @@ CREATE TABLE projects (
   img_url VARCHAR(255),
   project_url VARCHAR(255),
   upvote_count INTEGER,
-  created_at CURRENT_DATE
+  created_at TIMESTAMP
 );
