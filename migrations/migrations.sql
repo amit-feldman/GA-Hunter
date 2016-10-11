@@ -12,7 +12,7 @@ CREATE TABLE users (
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
   course VARCHAR NOT NULL,
-  createdAt TIMESTAMP NOT NULL DEFAULT NOW()
+  created TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
 CREATE TABLE projects (
@@ -22,5 +22,33 @@ CREATE TABLE projects (
   image VARCHAR(255),
   project VARCHAR(255),
   upvote INTEGER,
+  created TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE projects_users (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER REFERENCES users (id),
+  project_id INTEGER REFERENCES projects (id)
+);
+
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  body TEXT,
+  user_id INTEGER REFERENCES users (id),
+  project_id INTEGER REFERENCES projects (id),
+  created TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(128),
+  project_id INTEGER REFERENCES projects (id),
+  created TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE upvotes (
+  id SERIAL PRIMARY KEY,
+  project_id INTEGER REFERENCES projects (id),
+  user_id INTEGER REFERENCES users (id),
   created TIMESTAMP NOT NULL DEFAULT NOW()
 );
