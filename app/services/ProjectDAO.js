@@ -8,7 +8,7 @@ class ProjectDAO {
   }
 
   static findBy(keyValue) {
-    const key = Object.keys(keyValue)[1];
+    const key = Object.keys(keyValue)[0];
     const value = keyValue[key];
     return db
     .one(sql.find, [key, value])
