@@ -11,6 +11,8 @@ class EditProject extends Component {
             <h5>
               <span className="title">Edit Project</span>
             </h5>
+          </div>
+          <div className="col-lg-6 col-xs-12">
             <Form />
           </div>
         </div>

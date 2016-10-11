@@ -34,10 +34,11 @@ body {
   background-color: #ffffff;
 }
 
-button {
-  margin: 0 5px;
-}
-
 a, button {
   cursor: pointer;
+}
+
+.nav-links {
+  color: #000;
+  text-decoration: none;
 }
