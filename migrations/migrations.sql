@@ -11,15 +11,15 @@ CREATE TABLE users (
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
   course VARCHAR NOT NULL,
-  created_at DATETIME
+  created_at TIMESTAMP
 );
 
 CREATE TABLE projects (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(128),
-  description TEXT,
+  name VARCHAR(128) NOT NULL,
+  description TEXT NOT NULL,
   img_url VARCHAR(255),
   project_url VARCHAR(255),
   upvote_count INTEGER,
-  created_at DATETIME
+  created_at TIMESTAMP
 );
