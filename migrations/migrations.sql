@@ -8,7 +8,7 @@ CREATE DATABASE ga_hunter;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(128),
+  name VARCHAR(128) NOT NULL,
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
   course VARCHAR NOT NULL,
