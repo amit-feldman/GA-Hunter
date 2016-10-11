@@ -30,3 +30,11 @@ CREATE TABLE projects_users (
   user_id INTEGER REFERENCES users (id),
   project_id INTEGER REFERENCES projects (id)
 );
+
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  body TEXT,
+  user_id INTEGER REFERENCES users (id),
+  project_id INTEGER REFERENCES projects (id),
+  createdAt TIMESTAMP NOT NULL DEFAULT NOW()
+);
