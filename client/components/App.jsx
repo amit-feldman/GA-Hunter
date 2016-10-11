@@ -26,18 +26,18 @@ class App extends Component {
             <div className="navbar-right">
               <ul className="list-inline">
                 <li>
-                  <Link to="/" className="btn btn-danger">
+                  <Link to="/projects/new" className="btn btn-danger">
                     <i className="fa fa-plus" />
                     &nbsp;
                     New Project
                   </Link>
                 </li>
                 <li>
-                  <IndexLink to="#">Login</IndexLink>
+                  <Link to="#">Login</Link>
                 </li>
                 <li><span className="pipe">|</span></li>
                 <li>
-                  <IndexLink to="#">Register</IndexLink>
+                  <Link to="#">Register</Link>
                 </li>
               </ul>
             </div>

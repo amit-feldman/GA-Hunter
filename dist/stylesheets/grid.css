@@ -62,6 +62,7 @@
     clear: both;
   }
 }
+
 [class*="col-"] {
   position: relative;
   min-height: 1px;
