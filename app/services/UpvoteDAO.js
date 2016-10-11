@@ -19,5 +19,9 @@ class UpvoteDAO {
     .one(sql.create, [project_id, user_id, created])
     .then((row) => new Upvote(row));
   }
-
+  static delete(id) {
+    return db.none(sql.delete, [id]);
+  }
 }
+
+module.exports = UpvoteDAO;
