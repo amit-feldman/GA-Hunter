@@ -11,7 +11,7 @@ CREATE TABLE users (
   email VARCHAR NOT NULL,
   password VARCHAR NOT NULL,
   course VARCHAR NOT NULL,
-  created_at TIMESTAMP
+  created_at CURRENT_DATE
 );
 
 CREATE TABLE projects (
@@ -21,5 +21,5 @@ CREATE TABLE projects (
   img_url VARCHAR(255),
   project_url VARCHAR(255),
   upvote_count INTEGER,
-  created_at TIMESTAMP
+  created_at CURRENT_DATE
 );
