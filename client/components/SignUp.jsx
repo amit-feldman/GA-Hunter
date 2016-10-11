@@ -20,6 +20,15 @@ class SignUp extends Component {
             </div>
             <div className="form-group no-margin">
               <input
+                name="course"
+                type="text"
+                className="form-control no-radius"
+                placeholder="Course"
+                required
+              />
+            </div>
+            <div className="form-group no-margin">
+              <input
                 name="email"
                 type="email"
                 className="form-control no-radius"
