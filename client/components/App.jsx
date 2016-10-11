@@ -26,7 +26,7 @@ class App extends Component {
             <div className="navbar-right">
               <ul className="list-inline">
                 <li>
-                  <Link to="/" className="btn btn-danger btn-nav">
+                  <Link to="/" className="btn btn-danger">
                     <i className="fa fa-plus" />
                     &nbsp;
                     New Project
@@ -46,6 +46,26 @@ class App extends Component {
         <div>
           {this.props.children}
         </div>
+        <footer>
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 text-left">
+                <ul className="list-inline">
+                  <li>
+                    &copy; 2016 GA-Hunter.
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-6 text-right">
+                <ul className="list-inline">
+                  <li>
+                    Made With <i className="fa fa-heart animate pulse loop" /> in New York
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
