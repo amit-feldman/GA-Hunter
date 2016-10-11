@@ -13,6 +13,12 @@ const sqlProvider = {
     create: sql('./sql/user/create.sql'),
     delete: sql('./sql/user/delete.sql'),
   },
+  projects: {
+  all: sql('./sql/project/all.sql'),
+  find: sql('./sql/project/find.sql'),
+  create: sql('./sql/project/create.sql'),
+  delete: sql('./sql/projects/delete.sql'),
+},
 };
 
 module.exports = sqlProvider;
