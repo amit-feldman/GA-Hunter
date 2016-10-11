@@ -1,3 +1,7 @@
+TRUNCATE TABLE proejects;
+
+ALTER SEQUENCE id RESTART WITH 1;
+
 INSERT INTO
   projects (name, description, image, project, upvote)
   VALUES ('tictactoe', 'a fun js game', 'http://www.fillmurray.com/200/200', 'www.yahoo.com', 10);

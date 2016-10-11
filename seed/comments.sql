@@ -1,3 +1,7 @@
+TRUNCATE TABLE comments;
+
+ALTER SEQUENCE id RESTART WITH 1;
+
 INSERT INTO comments (body, user_id, project_id)
   VALUES ('great work.  Id love to see the final product', 3, 8);
 INSERT INTO comments (body, user_id, project_id)
