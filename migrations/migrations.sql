@@ -19,9 +19,9 @@ CREATE TABLE projects (
   id SERIAL PRIMARY KEY,
   name VARCHAR(128) NOT NULL,
   description TEXT NOT NULL,
-  imgUrl VARCHAR(255),
-  projectUrl VARCHAR(255),
-  upvoteCount INTEGER,
+  image VARCHAR(255),
+  project VARCHAR(255),
+  upvote INTEGER,
   created TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
