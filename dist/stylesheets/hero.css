@@ -11,5 +11,13 @@
 */
 
 .hero {
-  padding: 120px 0;
+  padding: 45px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.hero h1, .hero p {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, .8);
 }
