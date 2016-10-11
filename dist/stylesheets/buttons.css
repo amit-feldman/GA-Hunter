@@ -65,6 +65,7 @@
 .btn.btn-primary:hover {
   background-color: #2980b9;
   border: 1px solid #2980b9;
+  color: #ffffff;
 }
 
 .btn.btn-primary.btn-outline {
@@ -88,6 +89,7 @@
 .btn.btn-success:hover {
   background-color: #27ae60;
   border: 1px solid #27ae60;
+  color: #ffffff;
 }
 
 .btn.btn-success.btn-outline {
@@ -111,6 +113,7 @@
 .btn.btn-warning:hover {
   background-color: #e0b60e;
   border: 1px solid #e0b60e;
+  color: #ffffff;
 }
 
 .btn.btn-warning.btn-outline {
@@ -134,6 +137,7 @@
 .btn.btn-danger:hover {
   background-color: #f6201d;
   border: 1px solid #f6201d;
+  color: #ffffff;
 }
 
 .btn.btn-danger.btn-outline {
