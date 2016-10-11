@@ -24,6 +24,7 @@
   color: white !important;
   font-size: 24px;
   margin-left: -15px;
+  cursor: default !important;
 }
 
 .ga-logo {
@@ -58,7 +59,7 @@
 }
 
 .navbar-dark a:hover {
-  color: #696969;
+  color: #c4c4c4;
   transition: .1s ease;
 }
 
