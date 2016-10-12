@@ -33,7 +33,6 @@ class UpvoteController {
       res.status(204).send();
     });
   }
-
 }
 
 module.exports = UpvoteController;
