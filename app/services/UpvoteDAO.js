@@ -16,9 +16,17 @@ class UpvoteDAO {
     .then((row) => new Upvote(row));
   }
 
-  static create({ project_id, user_id, created }) {
+  static create({
+    project_id,
+    user_id,
+    created,
+  }) {
     return db
-    .one(sql.create, [project_id, user_id, created])
+    .one(sql.create, [
+      project_id,
+      user_id,
+      created,
+    ])
     .then((row) => new Upvote(row));
   }
   
