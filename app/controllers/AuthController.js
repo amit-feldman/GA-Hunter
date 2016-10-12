@@ -23,20 +23,20 @@ class AuthController {
   }
 
   static signUp(req, res) {
+    const name = req.body.name;
+    const course = req.body.course;
     const email = req.body.email;
-
     let password = req.body.password;
     if (email.length > 0 && password.length > 0) {
       password = bcrypt.hashSync(password, 10);
-      UserDAO.create({ email, password })
+      UserDAO.create({ name, email, password, course })
       .then((user) => {
         req.session.currentUser = user;
         const token = createToken(user);
         res.cookie('token', token);
         res.status(200).json(user);
-      }).catch((err) => {
-        res.status(500).json(err);
-      });
+      })
+      .catch((err) => res.status(500).json(err));
     } else {
       res.status(400).end();
     }
