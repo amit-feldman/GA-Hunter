@@ -29,3 +29,5 @@ class UpvoteController {
   }
 
 }
+
+module.exports = UpvoteController;
