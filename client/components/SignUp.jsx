@@ -40,6 +40,7 @@ class SignUp extends Component {
                 name="course"
                 type="text"
                 className="form-control no-radius"
+                onChange={this.handleChange}
                 placeholder="Course"
                 required
               />
@@ -49,6 +50,7 @@ class SignUp extends Component {
                 name="email"
                 type="email"
                 className="form-control no-radius"
+                onChange={this.handleChange}
                 placeholder="email"
                 required
               />
@@ -59,6 +61,7 @@ class SignUp extends Component {
                 type="password"
                 className="form-control"
                 placeholder="password"
+                onChange={this.handleChange}
                 required
               />
             </div>
