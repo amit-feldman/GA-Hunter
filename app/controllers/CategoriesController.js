@@ -6,15 +6,15 @@ class CategoryController {
   }
 
   getOne(req, res) {
-    dd
+    // dd
   }
 
   createCategory(req, res) {
-    dd
+    // dd
   }
 
   deleteCategory(req, res) {
-    dd
+    // dd
   }
 }
 
