@@ -10,7 +10,35 @@ class Form extends Component {
       url: '',
       banner: '',
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleChange(e) {
+    const stateObj = {};
+    const stateKey = e.target.name;
+
+    stateObj[stateKey] = e.target.value;
+    this.setState(stateObj);
+  }
+
+  handleSubmit() {
+    const apiUrl = 'http://localhost:3000/api/projects';
+    const { name, description, image, url, banner } = this.state;
+
+    request.post(url)
+    .send({
+      name: name,
+      description: description,
+      image: image,
+      url: url,
+      banner: banner,
+    })
+    .end(() => {
+      this.props.router.push('/');
+    });
+  }
+
   render() {
     return (
       <form className="project-form">
@@ -24,6 +52,7 @@ class Form extends Component {
             name="name"
             type="text"
             className="form-control"
+            onChange={this.handleChange}
             autoFocus
             placeholder="ie: Dr. Brown's one-click order button"
           />
@@ -38,6 +67,7 @@ class Form extends Component {
             name="url"
             type="text"
             className="form-control"
+            onChange={this.handleChange}
             placeholder="https://"
           />
         </div>
@@ -51,6 +81,7 @@ class Form extends Component {
             name="image"
             type="text"
             className="form-control"
+            onChange={this.handleChange}
             placeholder="https://"
           />
         </div>
@@ -64,6 +95,7 @@ class Form extends Component {
             name="banner"
             type="text"
             className="form-control"
+            onChange={this.handleChange}
             placeholder="https://"
           />
         </div>
@@ -77,6 +109,7 @@ class Form extends Component {
             name="description"
             type="text"
             className="form-control form-textarea"
+            onChange={this.handleChange}
             placeholder="Some fancy description."
           />
         </div>
@@ -85,6 +118,7 @@ class Form extends Component {
             type="submit"
             value="Submit"
             className="btn btn-danger btn-lg btn-switch btn-block"
+            onSubmit={this.handleSubmit}
           />
         </div>
       </form>
