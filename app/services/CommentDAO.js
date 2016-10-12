@@ -13,10 +13,7 @@ class CommentDAO {
     const value = keyValue[key];
 
     return db
-    .one(sql.find, [
-      key,
-      value,
-    ])
+    .one(sql.find, [key, value])
     .then((row) => new Comment(row));
   }
 
