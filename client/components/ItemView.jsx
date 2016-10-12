@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ItemView = () => {
+function ItemView() {
   return (
     <div>
       ItemView
     </div>
-  )
-};
+  );
+}
 
 export default ItemView;

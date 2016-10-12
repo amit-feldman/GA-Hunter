@@ -9,7 +9,9 @@ class UserController {
 
   static getOne(req, res) {
     UserDAO
-    .findBy({ id: req.params.id })
+    .findBy({
+      id: req.params.id,
+    })
     .then((user) => res.status(200).json(user));
   }
 }

@@ -9,7 +9,7 @@ const customStyling = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(200,200,255,.75)',
+    backgroundColor: 'rgba(200, 200, 255, .75)',
   },
   content: {
     position: 'absolute',
@@ -30,16 +30,27 @@ const customStyling = {
 class ModalView extends React.Component {
   constructor() {
     super();
-    this.state = { open: false };
+
+    this.state = {
+      open: false,
+    };
+
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
+
   openModal() {
-    this.setState({ open: true });
+    this.setState({
+      open: true,
+    });
   }
+
   closeModal() {
-    this.setState({ open: false });
+    this.setState({
+      open: false,
+    });
   }
+
   render() {
     return (
       <div>

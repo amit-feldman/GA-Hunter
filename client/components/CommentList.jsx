@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from './Comment.jsx';
 
-const CommentList = () => {
+function CommentList() {
   return (
     <div id="comment-list">
       <Comment />
@@ -9,7 +9,7 @@ const CommentList = () => {
       <Comment />
       <Comment />
     </div>
-  )
-};
+  );
+}
 
 export default CommentList;
