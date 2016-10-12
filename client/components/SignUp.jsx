@@ -20,7 +20,13 @@ class SignUp extends Component {
     this.setState(stateObj);
   }
   handleSubmit() {
+    const url = `http://localhost:3000/api/signup`
     const { name, email, password, course } = this.state;
+    request.post(url)
+      .send({name: name, email: email, password: password, course: course})
+      .end((err) => {
+        alert('error registering')
+      });
   }
   render() {
     return (
