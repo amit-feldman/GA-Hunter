@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemList from './ItemList.jsx';
 
-const ProfileView = () => {
+function ProfileView() {
   return (
     <div id="profile">
       <h2>Name: </h2>
@@ -9,6 +9,6 @@ const ProfileView = () => {
       <ItemList />
     </div>
   );
-};
+}
 
 export default ProfileView;
