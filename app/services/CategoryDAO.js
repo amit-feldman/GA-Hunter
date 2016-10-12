@@ -26,4 +26,4 @@ class CategoryDAO {
   }
 }
 
-module.exports = UserDAO;
+module.exports = CategoryDAO;
