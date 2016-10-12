@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CommentView = () => {
+function CommentView() {
   return (
     <div>
       Dummy Comment
     </div>
-  )
-};
+  );
+}
 
 export default CommentView;

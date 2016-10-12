@@ -1,5 +1,13 @@
 class Project {
-  constructor({ id, name, description, image, project, upvote, created }) {
+  constructor({
+    id,
+    name,
+    description,
+    image,
+    project,
+    upvote,
+    created,
+  }) {
     this.id = id;
     this.name = name;
     this.description = description;

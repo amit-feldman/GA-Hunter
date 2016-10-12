@@ -3,6 +3,7 @@ const path = require('path');
 
 function sql(file) {
   const fullPath = path.join(__dirname, file);
+
   return new QueryFile(fullPath, { minify: true });
 }
 
@@ -29,12 +30,12 @@ const sqlProvider = {
     delete: sql('./sql/projects_users/delete.sql'),
   },
   comments: {
-    all:  sql('./sql/comment/all.sql'),
+    all: sql('./sql/comment/all.sql'),
     find: sql('./sql/comment/find.sql'),
     create: sql('./sql/comment/create.sql'),
     update: sql('./sql/comment/update.sql'),
     delete: sql('./sql/comment/delete.sql'),
-},
+  },
   upvotes: {
     all: sql('./sql/upvote/all.sql'),
     find: sql('./sql/upvote/find.sql'),

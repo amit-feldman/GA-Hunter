@@ -1,5 +1,11 @@
 class Comment {
-  constructor({ id, body, user_id, project_id, created }) {
+  constructor({
+    id,
+    body,
+    user_id,
+    project_id,
+    created,
+  }) {
     this.id = id;
     this.body = body;
     this.user_id = user_id;
