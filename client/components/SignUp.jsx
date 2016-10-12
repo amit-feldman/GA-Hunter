@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
 
 class SignUp extends Component {
+  constructor () {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      course: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    const stateObj = {};
+    const stateKey = e.target.name;
+    stateObj[stateKey] = e.target.value;
+    this.setState(stateObj);
+  }
   render() {
     return (
       <div className="container">
@@ -13,6 +29,7 @@ class SignUp extends Component {
                 name="name"
                 type="text"
                 className="form-control"
+                onChange={this.handleChange}
                 placeholder="Name"
                 autoFocus
                 required
