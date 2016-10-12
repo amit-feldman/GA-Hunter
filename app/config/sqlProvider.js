@@ -19,7 +19,6 @@ const sqlProvider = {
     create: sql('./sql/project/create.sql'),
     delete: sql('./sql/project/delete.sql'),
   },
-
   comments: {
     all:  sql('./sql/comment/all.sql'),
     find: sql('./sql/comment/find.sql'),
@@ -31,7 +30,6 @@ const sqlProvider = {
     find: sql('./sql/upvote/find.sql'),
     create: sql('./sql/upvote/create.sql'),
     delete: sql('./sql/upvote/delete.sql'),
-
   },
 };
 
