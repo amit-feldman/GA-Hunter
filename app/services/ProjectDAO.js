@@ -21,6 +21,8 @@ class ProjectDAO {
     .one(sql.create, [name, description, image, project, upvote])
     .then((row) => new Project(row));
   }
+  // 
+  // static update({ name, description, image, project, upvote })
 
   static delete(id) {
     return db.none(sql.delete, [id]);
