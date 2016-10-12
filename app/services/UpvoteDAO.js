@@ -13,10 +13,7 @@ class UpvoteDAO {
     const value = keyValue[key];
 
     return db
-    .one(sql.find, [
-      key,
-      value,
-    ])
+    .one(sql.find, [key, value])
     .then((row) => new Upvote(row));
   }
 
