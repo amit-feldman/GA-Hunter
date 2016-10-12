@@ -24,8 +24,8 @@ class SignUp extends Component {
     const { name, email, password, course } = this.state;
     request.post(url)
       .send({name: name, email: email, password: password, course: course})
-      .end((err) => {
-        alert('error registering')
+      .end(() => {
+        alert('successfully signed up!');
       });
   }
   render() {
