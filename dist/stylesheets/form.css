@@ -96,6 +96,10 @@
   margin-bottom: 15px;
 }
 
+.no-margin {
+  margin-bottom: 0;
+}
+
 form > div > label {
   font-size: 1em;
   font-weight: bold;

@@ -33,11 +33,11 @@ class App extends Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">Login</Link>
+                  <Link to="/login">Login</Link>
                 </li>
                 <li><span className="pipe">|</span></li>
                 <li>
-                  <Link to="#">Register</Link>
+                  <Link to="/signup">Register</Link>
                 </li>
               </ul>
             </div>
