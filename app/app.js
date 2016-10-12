@@ -29,7 +29,7 @@ app.use('/api', authentication);
 app.use('/api', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/projects', projectRouter);
-app.use('/api/comments', commentRouter);
-app.use('/api/upvotes', upvoteRouter);
+// app.use('/api/comments', commentRouter);
+// app.use('/api/upvotes', upvoteRouter);
 
 module.exports = app;
