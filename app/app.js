@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
 const userRouter = require('./routes/userRouter');
 const projectRouter = require('./routes/projectRouter');
+const categoryRouter = require('./routes/categoryRouter');
 // const commentRouter = require('./routes/commentRouter');
 // const upvoteRouter = require('./routes/upvoteRouter');
 const authRouter = require('./routes/authRouter');
@@ -29,6 +30,7 @@ app.use('/api', authentication);
 app.use('/api', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/projects', projectRouter);
+app.use('/api/categories', categoryRouter);
 // app.use('/api/comments', commentRouter);
 // app.use('/api/upvotes', upvoteRouter);
 
