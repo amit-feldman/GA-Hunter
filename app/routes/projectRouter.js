@@ -8,3 +8,5 @@ router.get('/:id', ProjectController.getOne);
 router.post('/', ProjectController.createProject);
 router.patch('/:id', ProjectController.updateProject);
 router.delete('/:id', ProjectController.deleteProject);
+
+module.exports = router;
