@@ -1,5 +1,5 @@
 const db = require('../config/db');
-const sql = require('../config/sqlProvider').users;
+const sql = require('../config/sqlProvider').comments;
 const Comment = require('../models/Comment.js');
 
 class CommentDAO {
