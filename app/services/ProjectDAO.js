@@ -4,7 +4,8 @@ const Project = require('../models/Project');
 
 class ProjectDAO {
   static all() {
-    return db.map(sql.all, [], (row) => new Project(row));
+    return db
+    .map(sql.all, [], (row) => new Project(row));
   }
 
   static findBy(keyValue) {
@@ -12,19 +13,48 @@ class ProjectDAO {
     const value = keyValue[key];
 
     return db
-    .one(sql.find, [key, value])
+    .one(sql.find, [
+      key,
+      value,
+    ])
     .then((row) => new Project(row));
   }
 
-  static create({ name, description, image, project, upvote }) {
+  static create({
+    name,
+    description,
+    image,
+    project,
+    upvote,
+  }) {
     return db
-    .one(sql.create, [name, description, image, project, upvote])
+    .one(sql.create, [
+      name,
+      description,
+      image,
+      project,
+      upvote,
+    ])
     .then((row) => new Project(row));
   }
 
-  static update({ id, name, description, image, project, upvote }) {
+  static update({
+    id,
+    name,
+    description,
+    image,
+    project,
+    upvote,
+  }) {
     return db
-    .one(sql.update, [name, description, image, project, upvote, id])
+    .one(sql.update, [
+      name,
+      description,
+      image,
+      project,
+      upvote,
+      id,
+    ])
     .then((row) => new Project(row));
   }
 

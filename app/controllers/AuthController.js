@@ -13,10 +13,12 @@ class AuthController {
       } else {
         req.session.currentUser = user;
         const token = createToken(user);
+
         res.cookie('token', token);
         res.status(200).json(user);
       }
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.error(err);
       res.status(401).end();
     });
@@ -26,13 +28,21 @@ class AuthController {
     const name = req.body.name;
     const course = req.body.course;
     const email = req.body.email;
+
     let password = req.body.password;
     if (email.length > 0 && password.length > 0) {
       password = bcrypt.hashSync(password, 10);
-      UserDAO.create({ name, email, password, course })
+
+      UserDAO.create({
+        name,
+        email,
+        password,
+        course,
+      })
       .then((user) => {
         req.session.currentUser = user;
         const token = createToken(user);
+
         res.cookie('token', token);
         res.status(200).json(user);
       })
@@ -44,6 +54,7 @@ class AuthController {
 
   static signOut(req, res) {
     req.session.currentUser = null;
+
     res.clearCookie('token');
     res.status(204).end();
   }

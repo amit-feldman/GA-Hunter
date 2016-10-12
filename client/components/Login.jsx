@@ -3,30 +3,39 @@ import { Link, withRouter } from 'react-router';
 import request from 'superagent';
 
 class Login extends Component {
-  constructor () {
+  constructor() {
     super();
+
     this.state = {
       email: '',
       password: '',
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(e) {
     const stateObj = {};
     const stateKey = e.target.name;
+
     stateObj[stateKey] = e.target.value;
     this.setState(stateObj);
   }
+
   handleSubmit() {
-    const url = `http://localhost:3000/api/login`
+    const url = 'http://localhost:3000/api/login';
     const { email, password } = this.state;
+
     request.post(url)
-      .send({email: email, password: password})
-      .end(() => {
-        this.props.router.push('/');
-      });
+    .send({
+      email: email,
+      password: password,
+    })
+    .end(() => {
+      this.props.router.push('/');
+    });
   }
+
   render() {
     return (
       <div className="container">
