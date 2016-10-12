@@ -3,17 +3,19 @@ const ProjectDAO = require('../services/ProjectDAO');
 
 class ProjectController {
   static getAll(req, res) {
-    ProjectDAO.all().then((projects) => {
+    ProjectDAO.all()
+    .then((projects) => {
       res.status(200).json(projects);
     });
   }
 
   static getOne(req, res) {
-    ProjectDAO
-    .findBy({
-      id: req.params.id
+    ProjectDAO.findBy({
+      id: req.params.id,
     })
-    .then((project) => res.status(200).json(project));
+    .then((project) => {
+      res.status(200).json(project);
+    });
   }
 
   static createProject(req, res) {
@@ -21,7 +23,7 @@ class ProjectController {
 
     ProjectDAO.create(projectData)
     .then((project) => {
-      res.status(200).send(project);
+      res.status(200).json(project);
     });
   }
 
@@ -30,7 +32,7 @@ class ProjectController {
 
     ProjectDAO.update(projectData)
     .then((project) => {
-      res.status(200).send(project);
+      res.status(200).json(project);
     });
   }
 
@@ -38,7 +40,9 @@ class ProjectController {
     const id = req.params.id;
 
     ProjectDAO.delete(id)
-    .then(() => res.status(204).send());
+    .then(() => {
+      res.status(204).send();
+    });
   }
 }
 
