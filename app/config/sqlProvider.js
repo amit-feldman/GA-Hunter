@@ -25,6 +25,12 @@ const sqlProvider = {
     create: sql('./sql/upvote/create.sql'),
     delete: sql('./sql/upvote/delete.sql'),
   },
+  categories: {
+    all: sql('./sql/categories/all.sql'),
+    find: sql('./sql/categories/find.sql'),
+    create: sql('./sql/categories/create.sql'),
+    delete: sql('./sql/categories/delete.sql'),
+  },
 };
 
 module.exports = sqlProvider;
