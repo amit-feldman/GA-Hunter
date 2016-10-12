@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
-
+import request from 'superagent';
 class SignUp extends Component {
   constructor () {
     super();
@@ -11,12 +11,16 @@ class SignUp extends Component {
       course: '',
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange(e) {
     const stateObj = {};
     const stateKey = e.target.name;
     stateObj[stateKey] = e.target.value;
     this.setState(stateObj);
+  }
+  handleSubmit() {
+    const { name, email, password, course } = this.state;
   }
   render() {
     return (
@@ -67,6 +71,7 @@ class SignUp extends Component {
             </div>
             <button
               className="btn btn-danger btn-switch btn-lg btn-block"
+              onClick={this.handleSubmit}
             >Register
             </button>
           </div>
