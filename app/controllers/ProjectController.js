@@ -1,5 +1,5 @@
 const ProjectDAO = require('../services/ProjectDAO');
-const ProjectsUsersDAO = require('../services/Projects_UsersDAO');
+// const ProjectsUsersDAO = require('../services/Projects_UsersDAO');
 
 class ProjectController {
   static getAll(req, res) {
@@ -21,14 +21,15 @@ class ProjectController {
   }
   static updateProject(req, res) {
     const projectData = req.body;
-    ProjectDAO.findBy({ id: req.params.id });
+    ProjectDAO.update(projectData)
     .then((project) => {
-    })
+      res.status(200).send(project);
+    });
   }
   static deleteProject(req, res) {
     const id = req.params.id;
     ProjectDAO.delete(id)
-    .then(() => res.status(204).send();
+    .then(() => res.status(204).send());
   }
 }
 
