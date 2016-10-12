@@ -1,6 +1,6 @@
 const db = require('../config/db');
 const sql = require('../config/sqlProvider').users;
-const User = require('../models/User');
+const User = require('../models/User.js');
 
 class UserDAO {
   static all() {
@@ -15,9 +15,9 @@ class UserDAO {
     .then((row) => new User(row));
   }
 
-  static create({ email, password }) {
+  static create({ name, email, password, course }) {
     return db
-    .one(sql.create, [email, password])
+    .one(sql.create, [name, email, password, course])
     .then((row) => new User(row));
   }
 
