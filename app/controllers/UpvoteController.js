@@ -8,8 +8,9 @@ class UpvoteController {
   }
 
   static getOne(req, res) {
-    UpvoteDAO
-    .findBy({ id: req.paramas.id })
+    UpvoteDAO.findBy({
+      id: req.paramas.id,
+    })
     .then((upvote) => {
       res.status(200).json(upvote);
     });
