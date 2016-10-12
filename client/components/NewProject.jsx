@@ -2,16 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import Form from './shared/Form.jsx';
 
-class NewProject extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: '',
-      description: '',
-      image: '',
-      project: '',
-    }
-  }
+function NewProject() {
   return (
     <div className="container">
       <div className="row">
