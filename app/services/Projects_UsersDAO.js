@@ -14,9 +14,9 @@ class ProjectsUsersDAO {
     .one(sql.find, [key, value])
     .then((row) => new ProjectUserObj(row));
   }
-  static create({ id, user_id, project_id }) {
+  static create({ user_id, project_id }) {
     return db
-    .one(sql.create, [id, user_id, project_id])
+    .one(sql.create, [user_id, project_id])
     .then((row) => new ProjectUserObj(row));
   }
   static delete(id) {
