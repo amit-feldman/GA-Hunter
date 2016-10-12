@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
 import request from 'superagent';
+
 class SignUp extends Component {
   constructor () {
     super();
@@ -25,7 +26,7 @@ class SignUp extends Component {
     request.post(url)
       .send({name: name, email: email, password: password, course: course})
       .end(() => {
-        alert('successfully signed up!');
+        this.props.router.push('/');
       });
   }
   render() {
