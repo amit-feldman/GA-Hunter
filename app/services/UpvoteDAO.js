@@ -1,6 +1,6 @@
 const db = require('../config/db');
 const sql = require('../config/sqlProvider').upvotes;
-const Upvote = require('../models/Upvote.js');
+const Upvote = require('../models/Upvote');
 
 class UpvoteDAO {
   static all() {
@@ -14,7 +14,7 @@ class UpvoteDAO {
     .one(sql.find, [key, value])
     .then((row) => new Upvote(row));
   }
-  static create({ project_id, user_id, created  }) {
+  static create({ project_id, user_id, created }) {
     return db
     .one(sql.create, [project_id, user_id, created])
     .then((row) => new Upvote(row));
