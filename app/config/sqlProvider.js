@@ -26,10 +26,10 @@ const sqlProvider = {
     delete: sql('./sql/upvote/delete.sql'),
   },
   categories: {
-    all: sql('./sql/categories/all.sql'),
-    find: sql('./sql/categories/find.sql'),
-    create: sql('./sql/categories/create.sql'),
-    delete: sql('./sql/categories/delete.sql'),
+    all: sql('./sql/category/all.sql'),
+    find: sql('./sql/category/find.sql'),
+    create: sql('./sql/category/create.sql'),
+    delete: sql('./sql/category/delete.sql'),
   },
 };
 
