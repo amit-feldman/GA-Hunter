@@ -10,7 +10,9 @@ class ProjectController {
 
   static getOne(req, res) {
     ProjectDAO
-    .findBy({ id: req.params.id })
+    .findBy({
+      id: req.params.id
+    })
     .then((project) => res.status(200).json(project));
   }
 
