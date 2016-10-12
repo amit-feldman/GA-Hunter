@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
+import request from 'superagent';
 
 class SignUp extends Component {
+  constructor () {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      course: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(e) {
+    const stateObj = {};
+    const stateKey = e.target.name;
+    stateObj[stateKey] = e.target.value;
+    this.setState(stateObj);
+  }
+  handleSubmit() {
+    const url = `http://localhost:3000/api/signup`
+    const { name, email, password, course } = this.state;
+    request.post(url)
+      .send({name: name, email: email, password: password, course: course})
+      .end(() => {
+        this.props.router.push('/');
+      });
+  }
   render() {
     return (
       <div className="container">
@@ -13,6 +40,7 @@ class SignUp extends Component {
                 name="name"
                 type="text"
                 className="form-control"
+                onChange={this.handleChange}
                 placeholder="Name"
                 autoFocus
                 required
@@ -23,6 +51,7 @@ class SignUp extends Component {
                 name="course"
                 type="text"
                 className="form-control no-radius"
+                onChange={this.handleChange}
                 placeholder="Course"
                 required
               />
@@ -32,6 +61,7 @@ class SignUp extends Component {
                 name="email"
                 type="email"
                 className="form-control no-radius"
+                onChange={this.handleChange}
                 placeholder="email"
                 required
               />
@@ -42,11 +72,13 @@ class SignUp extends Component {
                 type="password"
                 className="form-control"
                 placeholder="password"
+                onChange={this.handleChange}
                 required
               />
             </div>
             <button
               className="btn btn-danger btn-switch btn-lg btn-block"
+              onClick={this.handleSubmit}
             >Register
             </button>
           </div>
