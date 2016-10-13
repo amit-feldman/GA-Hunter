@@ -9,6 +9,7 @@ class Form extends Component {
     this.state = {
       name: '',
       description: '',
+      tagline: '',
       image: '',
       url: '',
       banner: '',
@@ -30,12 +31,13 @@ class Form extends Component {
     e.preventDefault();
 
     const apiUrl = 'http://localhost:3000/api/projects';
-    const { name, description, image, url, banner } = this.state;
+    const { name, description, tagline, image, url, banner } = this.state;
 
     request.post(apiUrl)
     .send({
       name: name,
       description: description,
+      tagline: tagline,
       image: image,
       url: url,
       banner: banner,
@@ -105,6 +107,23 @@ class Form extends Component {
             className="form-control"
             onChange={this.handleChange}
             placeholder="https://"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label
+            htmlFor="tagline"
+          >Tagline
+          </label>
+          <input
+            id="tagline"
+            name="tagline"
+            type="text"
+            maxLength="140"
+            className="form-control"
+            onChange={this.handleChange}
+            placeholder="Short 140 char tagline of the project"
+            required
           />
         </div>
         <div className="form-group">

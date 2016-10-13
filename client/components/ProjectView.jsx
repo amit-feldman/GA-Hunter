@@ -5,17 +5,26 @@ const propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
+  image: React.PropTypes.string,
 };
 
 class ProjectView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      owner: false,
+    };
+  }
+
   render() {
     return (
       <div className="project-card" id={this.props.id}>
         <div className="col-lg-2 project-img-wrapper text-center">
           <img
-            src="http://placehold.it/80/ffffff/000000"
+            src={this.props.image}
             alt="placeholder"
-            className="img-responsive img-project"
+            className="img-project"
           />
         </div>
         <div className="col-lg-10">
@@ -26,9 +35,21 @@ class ProjectView extends Component {
             {this.props.tagline}
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <ul className="list-inline">
+          <ul className="list-inline pull-left">
             <li>
               <Upvote />
+            </li>
+          </ul>
+          <ul className="list-inline pull-right">
+            <li>
+              <button className="btn btn-xs btn-upvote">
+                <i className="fa fa-pencil" />
+              </button>
+            </li>
+            <li>
+              <button className="btn btn-xs btn-upvote">
+                <i className="fa fa-trash" />
+              </button>
             </li>
           </ul>
         </div>

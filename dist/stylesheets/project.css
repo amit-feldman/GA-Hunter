@@ -19,7 +19,7 @@
 
 .project {
   padding: 15px;
-  height: 130px;
+  height: 150px;
   border-bottom: 1px solid #f2f2f2;
   transition: .1s ease;
   cursor: pointer;
@@ -32,6 +32,8 @@
 
 .img-project {
   display: inline-flex;
+  width: 80px;
+  height: 80px;
 }
 
 .project-img-wrapper {
@@ -45,7 +47,9 @@
 .project-p {
   margin: 0;
   padding-top: 5px;
+  padding-bottom: 12px;
   color: #999999;
+  border-bottom: 1px solid #f2f2f2;
 }
 
 .project-h3 {

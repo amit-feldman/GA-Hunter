@@ -5,6 +5,7 @@ const propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
+  image: React.PropTypes.string,
 };
 
 class Project extends Component {
@@ -15,6 +16,7 @@ class Project extends Component {
           id={this.props.id}
           name={this.props.name}
           tagline={this.props.tagline}
+          image={this.props.image}
         />
       </li>
     );
