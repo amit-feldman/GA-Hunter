@@ -30,16 +30,20 @@ class SignUp extends Component {
     const url = 'http://localhost:3000/api/signup';
     const { name, email, password, course } = this.state;
 
-    request.post(url)
-    .send({
-      name: name,
-      email: email,
-      password: password,
-      course: course,
-    })
-    .end(() => {
-      this.props.router.push('/');
-    });
+    if (name && email && password && course) {
+      request.post(url)
+      .send({
+        name: name,
+        email: email,
+        password: password,
+        course: course,
+      })
+      .end(() => {
+        this.props.router.push('/');
+      });
+    } else {
+      alert('You must fill out all forms to sign up!');
+    }
   }
 
   render() {
@@ -60,14 +64,17 @@ class SignUp extends Component {
               />
             </div>
             <div className="form-group no-margin">
-              <input
+              <select
                 name="course"
-                type="text"
-                className="form-control no-radius"
                 onChange={this.handleChange}
-                placeholder="Course"
-                required
-              />
+              >
+                <option disabled selected>choose course...</option>
+                <option>WDI</option>
+                <option>UXDI</option>
+                <option>Data Science</option>
+                <option>iOS Development</option>
+                <option>Android Development</option>
+              </select>
             </div>
             <div className="form-group no-margin">
               <input
@@ -105,3 +112,12 @@ class SignUp extends Component {
 }
 
 export default withRouter(SignUp);
+
+// <input
+//   name="course"
+//   type="text"
+//   className="form-control no-radius"
+//   onChange={this.handleChange}
+//   placeholder="Course"
+//   required
+// />
