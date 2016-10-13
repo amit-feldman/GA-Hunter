@@ -1,6 +1,6 @@
 TRUNCATE TABLE projects_users;
 
-ALTER SEQUENCE id RESTART WITH 1;
+-- ALTER SEQUENCE id RESTART WITH 1;
 
 INSERT INTO projects_users (user_id, project_id) VALUES (1,1);
 INSERT INTO projects_users (user_id, project_id) VALUES (6,1);

@@ -1,6 +1,6 @@
 TRUNCATE TABLE categories;
 
-ALTER SEQUENCE id RESTART WITH 1;
+-- ALTER SEQUENCE id RESTART WITH 1;
 
 INSERT INTO categories (name, project_id) VALUES ('JavaScript', 1);
 INSERT INTO categories (name, project_id) VALUES ('JQuery', 1);
