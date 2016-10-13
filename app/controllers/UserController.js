@@ -14,6 +14,26 @@ class UserController {
     })
     .then((user) => res.status(200).json(user));
   }
+
+// createUser handled in the AuthController
+
+  static updateUser(req, res) {
+    const userData = req.body;
+
+    UserDAO.update(userData)
+    .then((user) => {
+      res.status(200).json(user);
+    });
+  }
+
+  static deleteUser(req, res) {
+    const id = req.params.id;
+
+    UserDAO.delete(id)
+    .then(() => {
+      res.status(204).send();
+    });
+  }
 }
 
 module.exports = UserController;
