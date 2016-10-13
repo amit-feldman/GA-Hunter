@@ -20,7 +20,8 @@ CREATE TABLE projects (
   name VARCHAR(128) NOT NULL,
   description TEXT NOT NULL,
   image VARCHAR(255),
-  project VARCHAR(255),
+  url VARCHAR(255),
+  banner VARCHAR(255),
   upvote INTEGER,
   created TIMESTAMP NOT NULL DEFAULT NOW()
 );

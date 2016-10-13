@@ -21,35 +21,35 @@ class ProjectDAO {
     name,
     description,
     image,
-    project,
-    upvote,
+    url,
+    banner,
   }) {
     return db
     .one(sql.create, [
       name,
       description,
       image,
-      project,
-      upvote,
+      url,
+      banner,
     ])
     .then((row) => new Project(row));
   }
 
   static update({
-    id,
     name,
     description,
     image,
-    project,
-    upvote,
+    url,
+    banner,
+    id,
   }) {
     return db
     .one(sql.update, [
       name,
       description,
       image,
-      project,
-      upvote,
+      url,
+      banner,
       id,
     ])
     .then((row) => new Project(row));
