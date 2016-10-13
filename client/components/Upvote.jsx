@@ -1,10 +1,10 @@
 import React from 'react';
 import UpvoteView from './UpvoteView.jsx';
 
-function Upvotes() {
+function Upvote() {
   return (
     <UpvoteView />
   );
 }
 
-export default Upvotes;
+export default Upvote;

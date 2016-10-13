@@ -40,7 +40,7 @@ class Login extends Component {
     return (
       <div className="container">
         <div className="form-signin">
-          <h5 className="form-signin-heading">Welcome Back!</h5>
+          <h2 className="form-signin-heading">Welcome Back!</h2>
           <div>
             <input
               name="email"

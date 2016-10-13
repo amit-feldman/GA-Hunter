@@ -1,5 +1,5 @@
 /*
- * Lists
+ * Images
  *
  * Authors:
  *          Amit Feldman
@@ -10,16 +10,12 @@
  * Version: 0.0.1
 */
 
-ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-ul.list-inline {
-  display: inline;
-}
-
-.list-inline > li {
-  display: inline-block;
+.img-rounded {
+  border-radius: 6px;
 }
