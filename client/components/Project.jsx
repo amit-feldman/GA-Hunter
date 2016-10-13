@@ -4,7 +4,7 @@ import ProjectView from './ProjectView.jsx';
 const propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
-  description: React.PropTypes.string,
+  tagline: React.PropTypes.string,
 };
 
 class Project extends Component {
@@ -14,7 +14,7 @@ class Project extends Component {
         <ProjectView
           id={this.props.id}
           name={this.props.name}
-          description={this.props.description}
+          tagline={this.props.tagline}
         />
       </li>
     );

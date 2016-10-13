@@ -26,7 +26,7 @@ class ProjectList extends Component {
         <Project
           key={project.id}
           name={project.name}
-          description={project.description}
+          tagline={project.tagline}
         />
       );
     });
