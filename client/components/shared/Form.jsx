@@ -42,7 +42,7 @@ class Form extends Component {
     })
     .end(() => {
       this.props.router.push('/');
-    });
+    })
   }
 
   render() {
