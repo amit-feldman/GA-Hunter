@@ -4,6 +4,7 @@ import App from '../client/components/App.jsx';
 import Home from '../client/components/Home.jsx';
 import Login from '../client/components/Login.jsx';
 import SignUp from '../client/components/SignUp.jsx';
+import ProjectList from '../client/components/ProjectList.jsx';
 import NewProject from '../client/components/NewProject.jsx';
 import EditProject from '../client/components/EditProject.jsx';
 
@@ -14,7 +15,7 @@ const Routes = () => {
         <IndexRoute component={Home} />
         <Route path="login" component={Login} />
         <Route path="signup" component={SignUp} />
-        {/* <Route path="projects" component={ProjectList} /> */}
+        <Route path="projects" component={ProjectList} />
         <Route path="projects/new" component={NewProject} />
         <Route path="projects/:id/edit" component={EditProject} />
       </Route>

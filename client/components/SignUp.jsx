@@ -50,7 +50,7 @@ class SignUp extends Component {
     return (
       <div className="container">
         <div className="form-signin">
-          <h5 className="form-signin-heading">Registration</h5>
+          <h2 className="form-signin-heading">Registration</h2>
           <div id="register-form">
             <div className="form-group no-margin">
               <input

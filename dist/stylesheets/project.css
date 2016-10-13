@@ -1,0 +1,61 @@
+/*
+ * Project
+ *
+ * Authors:
+ *          Amit Feldman
+ *          Mark Robertson
+ *          Tom Mulroy
+ *
+ * Date: October 8th, 2016
+ * Version: 0.0.1
+*/
+
+.project-wrapper {
+  margin-top: 25px;
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+  padding: 0;
+}
+
+.project {
+  padding: 15px;
+  height: 130px;
+  border-bottom: 1px solid #f2f2f2;
+  transition: .1s ease;
+  cursor: pointer;
+}
+
+.project:hover {
+  background-color: #f9f9f9;
+  transition: .1s ease;
+}
+
+.img-project {
+  display: inline-flex;
+}
+
+.project-img-wrapper {
+  width: auto;
+}
+
+.project-card {
+  padding-top: 10px;
+}
+
+.project-p {
+  margin: 0;
+  padding-top: 5px;
+  color: #999999;
+}
+
+.project-h3 {
+  font-weight: lighter;
+}
+
+.project-title-header {
+  font-size: 25px;
+  margin: 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+  font-weight: 100;
+}

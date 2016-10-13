@@ -18,7 +18,9 @@
 @import "navbar.css";
 @import "footer.css";
 @import "lists.css";
+@import "images.css";
 @import "jumbotron.css";
+@import "project.css";
 @import "hero.css";
 @import "form.css";
 @import "animations.css";
@@ -31,7 +33,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
 }
 
 a, button {

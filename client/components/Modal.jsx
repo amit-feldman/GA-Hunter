@@ -9,7 +9,7 @@ const customStyling = {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(200, 200, 255, .75)',
+    backgroundColor: 'hsla(0, 0%, 97%, .8);',
   },
   content: {
     position: 'absolute',
