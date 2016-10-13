@@ -44,3 +44,12 @@ a, button {
   color: #000;
   text-decoration: none;
 }
+
+@media (max-width: 544px) {
+  .navbar {
+    height: 58px;
+  }
+  .navbar ul li{
+    visibility: hidden;
+  }
+}

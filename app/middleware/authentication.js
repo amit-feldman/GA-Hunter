@@ -7,6 +7,7 @@ function authenticate(req, res, next) {
     '/signup',
     '/login',
     '/signout',
+    '/projects',
   ];
 
   if (nonRestricedRoutes.includes(req.path)) {
