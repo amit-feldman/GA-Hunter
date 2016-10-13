@@ -2,6 +2,7 @@ CREATE TABLE projects (
   id SERIAL PRIMARY KEY,
   name VARCHAR(128) NOT NULL,
   description TEXT NOT NULL,
+  tagline VARCHAR(140) NOT NULL,
   image VARCHAR(255),
   url VARCHAR(255),
   banner VARCHAR(255),
