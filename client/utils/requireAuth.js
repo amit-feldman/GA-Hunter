@@ -1,17 +1,18 @@
-import request from 'superagent';
 
 function requireAuth(nextState, replace, callback) {
-  const path = `api${nextState.location.pathname}`;
-  request.get(path)
-    .then(res => {
-      callback();
-    }).catch((err) => {
+    if(document.cookie) {
+      console.log('in IF statement true')
       replace({
-        pathname: '/login',
-        state: {next: nextState.location.pathname}
+        pathname: '/projects/new/blah',
       });
       callback();
-    })
+    } else {
+      console.log('in ELSE');
+      replace({
+        pathname: '/login',
+      });
+      callback();
+    }
 };
 
 export default requireAuth;
