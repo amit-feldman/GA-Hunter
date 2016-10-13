@@ -4,6 +4,7 @@ import request from 'superagent';
 class Form extends Component {
   constructor() {
     super();
+
     this.state = {
       name: '',
       description: '',
@@ -11,6 +12,7 @@ class Form extends Component {
       url: '',
       banner: '',
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -25,8 +27,10 @@ class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     const apiUrl = 'http://localhost:3000/api/projects';
     const { name, description, image, url, banner } = this.state;
+
     request.post(apiUrl)
     .send({
       name: name,
@@ -36,7 +40,7 @@ class Form extends Component {
       banner: banner,
     })
     .end(() => {
-      alert('hello')
+      alert('hello');
     });
   }
 
@@ -56,6 +60,7 @@ class Form extends Component {
             onChange={this.handleChange}
             autoFocus
             placeholder="ie: Dr. Brown's one-click order button"
+            required
           />
         </div>
         <div className="form-group">
@@ -70,6 +75,7 @@ class Form extends Component {
             className="form-control"
             onChange={this.handleChange}
             placeholder="https://"
+            required
           />
         </div>
         <div className="form-group">
@@ -112,6 +118,7 @@ class Form extends Component {
             className="form-control form-textarea"
             onChange={this.handleChange}
             placeholder="Some fancy description."
+            required
           />
         </div>
         <div className="form-group">
