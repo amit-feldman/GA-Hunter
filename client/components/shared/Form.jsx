@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router';
 import request from 'superagent';
 
 class Form extends Component {
@@ -39,7 +40,9 @@ class Form extends Component {
       url: url,
       banner: banner,
     })
-    .end(() => {});
+    .end(() => {
+      this.props.router.push('/');
+    });
   }
 
   render() {
@@ -132,4 +135,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default withRouter(Form);
