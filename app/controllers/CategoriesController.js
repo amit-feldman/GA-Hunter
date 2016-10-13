@@ -1,26 +1,28 @@
 const CategoryDAO = require('../services/CategoryDAO');
 
-class CategoryController {
-  getAll(req, res) {
+class CategoriesController {
+  static getAll(req, res) {
     CategoryDAO.all()
     .then((categories) => {
       res.status(200).json(categories);
     });
   }
-  getOne(req, res) {
-    CategoryDAO.findBy({ id: req.params.id })
+  static getOne(req, res) {
+    CategoryDAO.findBy({
+      id: req.params.id,
+    })
     .then((category) => {
       res.status(200).json(category);
     });
   }
-  createCategory(req, res) {
+  static createCategory(req, res) {
     const categoryData = req.body;
     CategoryDAO.create(categoryData)
     .then((category) => {
       res.status(200).send(category);
     });
   }
-  deleteCategory(req, res) {
+  static deleteCategory(req, res) {
     const id = req.params.id;
     CategoryDAO.delete(id)
     .then(() => {
@@ -29,4 +31,4 @@ class CategoryController {
   }
 }
 
-module.exports = CategoryController;
+module.exports = CategoriesController;
