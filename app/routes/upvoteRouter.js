@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', UpvoteController.getAll);
 router.get('/:id', UpvoteController.getOne);
-router.post('/', UpvoteController.createProject);
-router.delete('/:id', UpvoteController.deleteProject);
+router.post('/', UpvoteController.createUpvote);
+router.delete('/:id', UpvoteController.deleteUpvote);
 
 module.exports = router;
