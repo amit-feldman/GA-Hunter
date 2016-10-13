@@ -19,7 +19,7 @@ class App extends Component {
                   <IndexLink to="/">Home</IndexLink>
                 </li>
                 <li>
-                  <IndexLink to="/">Projects</IndexLink>
+                  <IndexLink to="/projects">Projects</IndexLink>
                 </li>
               </ul>
             </div>
