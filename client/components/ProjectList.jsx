@@ -27,6 +27,7 @@ class ProjectList extends Component {
           id={project.id}
           name={project.name}
           description={project.description}
+          image={project.image}
         />
       );
     });
