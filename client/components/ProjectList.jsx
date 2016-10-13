@@ -24,7 +24,7 @@ class ProjectList extends Component {
     const projectList = this.state.projects.map((project) => {
       return (
         <Project
-          key={project.id}
+          id={project.id}
           name={project.name}
           description={project.description}
         />

@@ -28,7 +28,9 @@ class ProjectView extends Component {
           </p>
           <ul className="list-inline">
             <li>
-              <Upvote />
+              <Upvote
+                id={this.props.id}
+              />
             </li>
           </ul>
         </div>
