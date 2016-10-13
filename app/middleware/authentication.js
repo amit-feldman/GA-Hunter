@@ -7,6 +7,7 @@ function authenticate(req, res, next) {
     '/signup',
     '/login',
     '/signout',
+    '/projects',
   ];
 
   if (nonRestricedRoutes.includes(req.path)) {
@@ -14,8 +15,10 @@ function authenticate(req, res, next) {
   }
 
   if (token && req.session.currentUser) {
+
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
       if (err) {
+        console.log(`token: ${token}`);
         return res.status(403).end();
       }
       req.decoded = decoded;

@@ -1,11 +1,79 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
+import request from 'superagent';
 
 const propTypes = {
   children: React.PropTypes.element.isRequired,
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loggedIn: false,
+    };
+
+    this.logIn = this.logIn.bind(this);
+    this.signOut = this.signOut.bind(this);
+  }
+
+  componentDidMount() {
+    this.logIn();
+  }
+
+  logIn() {
+    if (document.cookie) {
+      this.setState({
+        loggedIn: true,
+      });
+    }
+  }
+
+  signOut() {
+    request.post('api/signout')
+    .then(() => {
+      this.setState({
+        loggedIn: false,
+      });
+    });
+  }
+
+  loggedInLinks() {
+    if (!this.state.loggedIn) {
+      return (
+        <ul className="list-inline">
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li><span className="pipe">|</span></li>
+          <li>
+            <Link to="/signup">Register</Link>
+          </li>
+        </ul>
+      );
+    }
+
+    return (
+      <ul className="list-inline">
+        <li>
+          <Link to="/projects/new" className="btn btn-danger btn-nav">
+            <i className="fa fa-plus" />
+            &nbsp;
+            New Project
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={this.signOut}
+            className="btn btn-primary btn-outline btn-nav"
+          >Logout
+          </Link>
+        </li>
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -24,22 +92,9 @@ class App extends Component {
               </ul>
             </div>
             <div className="navbar-right">
-              <ul className="list-inline">
-                <li>
-                  <Link to="/projects/new" className="btn btn-danger">
-                    <i className="fa fa-plus" />
-                    &nbsp;
-                    New Project
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li><span className="pipe">|</span></li>
-                <li>
-                  <Link to="/signup">Register</Link>
-                </li>
-              </ul>
+              {
+                this.loggedInLinks()
+              }
             </div>
           </div>
         </nav>
