@@ -19,6 +19,7 @@ class CategoriesController {
 
   static createCategory(req, res) {
     const categoryData = req.body;
+
     CategoryDAO.create(categoryData)
     .then((category) => {
       res.status(200).send(category);
@@ -27,6 +28,7 @@ class CategoriesController {
 
   static deleteCategory(req, res) {
     const id = req.params.id;
+
     CategoryDAO.delete(id)
     .then(() => {
       res.status(204).send();
