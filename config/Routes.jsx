@@ -16,13 +16,12 @@ const Routes = () => {
         <IndexRoute component={Home} />
         <Route path="login" component={Login} />
         <Route path="signup" component={SignUp} />
-<<<<<<< HEAD
         {/* <Route path="projects" component={ProjectList} /> */}
         <Route path="projects/new" component={NewProject} onEnter={requireAuth}/>
-=======
+
         <Route path="projects" component={ProjectList} />
         <Route path="projects/new" component={NewProject} />
->>>>>>> cb900d712c7debd7e84873a60bb80a2a5b15717b
+
         <Route path="projects/:id/edit" component={EditProject} />
       </Route>
       <Route path="user/:id" component={App}>
