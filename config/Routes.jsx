@@ -7,6 +7,7 @@ import SignUp from '../client/components/SignUp.jsx';
 import ProjectList from '../client/components/ProjectList.jsx';
 import NewProject from '../client/components/NewProject.jsx';
 import EditProject from '../client/components/EditProject.jsx';
+import requireAuth from '../client/utils/requireAuth.js';
 
 const Routes = () => {
   return (
@@ -15,8 +16,12 @@ const Routes = () => {
         <IndexRoute component={Home} />
         <Route path="login" component={Login} />
         <Route path="signup" component={SignUp} />
+        {/* <Route path="projects" component={ProjectList} /> */}
+        <Route path="projects/new" component={NewProject} onEnter={requireAuth}/>
+
         <Route path="projects" component={ProjectList} />
-        <Route path="projects/new" component={NewProject} />
+        <Route path="projects/new/form" component={NewProject} />
+
         <Route path="projects/:id/edit" component={EditProject} />
       </Route>
       <Route path="user/:id" component={App}>
