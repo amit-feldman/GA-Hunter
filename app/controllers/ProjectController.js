@@ -11,14 +11,14 @@ class ProjectController {
   static getOne(req, res) {
     ProjectDAO
     .findBy({
-      id: req.params.id
+      id: req.params.id,
     })
     .then((project) => res.status(200).json(project));
   }
 
   static createProject(req, res) {
     const projectData = req.body;
-
+    console.log('inside creatProject in project controller');
     ProjectDAO.create(projectData)
     .then((project) => {
       res.status(200).send(project);

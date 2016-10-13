@@ -18,6 +18,7 @@ class SignUp extends Component {
   }
 
   handleChange(e) {
+    e.preventDefault();
     const stateObj = {};
     const stateKey = e.target.name;
 

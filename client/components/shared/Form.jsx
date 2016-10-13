@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 
 class Form extends Component {
   constructor() {
@@ -22,11 +23,11 @@ class Form extends Component {
     this.setState(stateObj);
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     const apiUrl = 'http://localhost:3000/api/projects';
     const { name, description, image, url, banner } = this.state;
-
-    request.post(url)
+    request.post(apiUrl)
     .send({
       name: name,
       description: description,
@@ -35,7 +36,7 @@ class Form extends Component {
       banner: banner,
     })
     .end(() => {
-      this.props.router.push('/');
+      alert('hello')
     });
   }
 
@@ -118,7 +119,7 @@ class Form extends Component {
             type="submit"
             value="Submit"
             className="btn btn-danger btn-lg btn-switch btn-block"
-            onSubmit={this.handleSubmit}
+            onClick={this.handleSubmit}
           />
         </div>
       </form>
