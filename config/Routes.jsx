@@ -20,7 +20,7 @@ const Routes = () => {
         <Route path="projects/new" component={NewProject} onEnter={requireAuth}/>
 
         <Route path="projects" component={ProjectList} />
-        // <Route path="projects/new/blah" component={NewProject} />
+        <Route path="projects/new/form" component={NewProject} />
 
         <Route path="projects/:id/edit" component={EditProject} />
       </Route>

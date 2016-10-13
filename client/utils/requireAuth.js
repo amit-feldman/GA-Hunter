@@ -3,7 +3,7 @@ function requireAuth(nextState, replace, callback) {
     if(document.cookie) {
       console.log('in IF statement true')
       replace({
-        pathname: '/projects/new/blah',
+        pathname: '/projects/new/form',
       });
       callback();
     } else {
