@@ -39,9 +39,7 @@ class Form extends Component {
       url: url,
       banner: banner,
     })
-    .end(() => {
-      alert('hello');
-    });
+    .end(() => {});
   }
 
   render() {

@@ -7,9 +7,9 @@ function NewProject() {
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
-          <h5>
+          <h2>
             <span className="title">New Project</span>
-          </h5>
+          </h2>
         </div>
         <div className="col-lg-6 col-xs-12">
           <Form />

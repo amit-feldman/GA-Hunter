@@ -20,7 +20,7 @@ class ProjectController {
 
   static createProject(req, res) {
     const projectData = req.body;
-    console.log('inside creatProject in project controller');
+    // console.log('inside creatProject in project controller');
     ProjectDAO.create(projectData)
     .then((project) => {
       res.status(200).json(project);
