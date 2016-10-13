@@ -25,6 +25,7 @@ class CommentsController {
       res.status(200).json(comment);
     });
   }
+
   static updateComment(req, res) {
     const commentData = req.body;
 
