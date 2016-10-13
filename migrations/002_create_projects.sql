@@ -6,5 +6,6 @@ CREATE TABLE projects (
   url VARCHAR(255),
   banner VARCHAR(255),
   upvote INTEGER,
+  user_id INTEGER REFERENCES users (id),
   created TIMESTAMP NOT NULL DEFAULT NOW()
 );
