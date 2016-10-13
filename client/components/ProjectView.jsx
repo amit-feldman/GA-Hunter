@@ -4,7 +4,7 @@ import Upvote from './Upvote.jsx';
 const propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
-  description: React.PropTypes.string,
+  tagline: React.PropTypes.string,
   image: React.PropTypes.string,
 };
 
@@ -32,8 +32,7 @@ class ProjectView extends Component {
             {this.props.name}
           </h3>
           <p className="project-p">
-            {/* {this.props.description} */}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {this.props.tagline}
           </p>
           <ul className="list-inline pull-left">
             <li>

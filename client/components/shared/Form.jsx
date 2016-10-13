@@ -119,6 +119,7 @@ class Form extends Component {
             id="tagline"
             name="tagline"
             type="text"
+            maxLength="140"
             className="form-control"
             onChange={this.handleChange}
             placeholder="Short 140 char tagline of the project"
