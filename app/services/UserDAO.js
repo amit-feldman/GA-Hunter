@@ -33,6 +33,24 @@ class UserDAO {
     .then((row) => new User(row));
   }
 
+  static update({
+    id,
+    name,
+    email,
+    password,
+    course,
+  }) {
+    return db
+    .one(sql.update, [
+      name,
+      email,
+      password,
+      course,
+      id,
+    ])
+    .then((row) => new User(row));
+  }
+
   static delete(id) {
     return db.none(sql.delete, [id]);
   }
