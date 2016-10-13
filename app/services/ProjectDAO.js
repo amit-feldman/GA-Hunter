@@ -20,6 +20,7 @@ class ProjectDAO {
   static create({
     name,
     description,
+    tagline,
     image,
     url,
     banner,
@@ -28,6 +29,7 @@ class ProjectDAO {
     .one(sql.create, [
       name,
       description,
+      tagline,
       image,
       url,
       banner,
@@ -38,6 +40,7 @@ class ProjectDAO {
   static update({
     name,
     description,
+    tagline,
     image,
     url,
     banner,
@@ -47,6 +50,7 @@ class ProjectDAO {
     .one(sql.update, [
       name,
       description,
+      tagline,
       image,
       url,
       banner,
