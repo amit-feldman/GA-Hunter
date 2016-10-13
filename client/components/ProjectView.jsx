@@ -33,7 +33,6 @@ class ProjectView extends Component {
           </h3>
           <p className="project-p">
             {this.props.tagline}
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <ul className="list-inline pull-left">
             <li>
