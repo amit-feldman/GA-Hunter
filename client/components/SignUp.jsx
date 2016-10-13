@@ -64,19 +64,6 @@ class SignUp extends Component {
               />
             </div>
             <div className="form-group no-margin">
-              <select
-                name="course"
-                onChange={this.handleChange}
-              >
-                <option disabled selected>choose course...</option>
-                <option>WDI</option>
-                <option>UXDI</option>
-                <option>Data Science</option>
-                <option>iOS Development</option>
-                <option>Android Development</option>
-              </select>
-            </div>
-            <div className="form-group no-margin">
               <input
                 name="email"
                 type="email"
@@ -95,6 +82,23 @@ class SignUp extends Component {
                 onChange={this.handleChange}
                 required
               />
+            </div>
+            <div className="form-group">
+              <label htmlFor="course">Select your Class</label>
+              <select
+                name="course"
+                onChange={this.handleChange}
+                className="form-control class-select"
+                id="course"
+                defaultValue="0"
+              >
+                <option disabled value="0">choose course...</option>
+                <option value="WDI">WDI</option>
+                <option value="UXDI">UXDI</option>
+                <option value="Data Science">Data Science</option>
+                <option value="iOS Development">iOS Development</option>
+                <option value="Android Development">Android Development</option>
+              </select>
             </div>
             <button
               className="btn btn-danger btn-switch btn-lg btn-block"
