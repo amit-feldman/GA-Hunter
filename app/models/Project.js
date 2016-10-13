@@ -3,6 +3,7 @@ class Project {
     id,
     name,
     description,
+    tagline,
     image,
     project,
     upvote,
@@ -11,6 +12,7 @@ class Project {
     this.id = id;
     this.name = name;
     this.description = description;
+    this.tagline = tagline;
     this.image = image;
     this.project = project;
     this.upvote = upvote;

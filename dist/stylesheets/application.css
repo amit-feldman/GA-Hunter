@@ -53,3 +53,7 @@ a, button {
     visibility: hidden;
   }
 }
+
+.class-select {
+  height: 38px !important;
+}
