@@ -17,7 +17,7 @@ class UserController {
 
 // createUser handled in the AuthController
 
-  updateUser(req, res) {
+  static updateUser(req, res) {
     const userData = req.body;
 
     UserDAO.update(userData)
@@ -25,7 +25,8 @@ class UserController {
       res.status(200).json(user);
     });
   }
-  deleteUser(req, res) {
+
+  static deleteUser(req, res) {
     const id = req.params.id;
 
     UserDAO.delete(id)
