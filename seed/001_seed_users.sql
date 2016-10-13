@@ -1,6 +1,6 @@
 TRUNCATE TABLE users;
 
-ALTER SEQUENCE id RESTART WITH 1;
+-- ALTER SEQUENCE id RESTART WITH 1;
 
 INSERT INTO users (name, email, password, course)
   VALUES ('Amit','amit@amit.com','password', 'WDI');

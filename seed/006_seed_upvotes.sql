@@ -1,6 +1,6 @@
 TRUNCATE TABLE upvotes;
 
-ALTER SEQUENCE id RESTART WITH 1;
+-- ALTER SEQUENCE id RESTART WITH 1;
 
 INSERT INTO upvotes (project_id, user_id) VALUES (1, 2);
 INSERT INTO upvotes (project_id, user_id) VALUES (1, 4);
