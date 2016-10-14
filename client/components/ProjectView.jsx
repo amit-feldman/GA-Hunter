@@ -17,6 +17,15 @@ class ProjectView extends Component {
     this.state = {
       owner: false,
     };
+    this.confirmDelete = this.confirmDelete.bind(this);
+  }
+
+  confirmDelete(e){
+    e.preventDefault();
+    const option = confirm('Are you sure?');
+    if (option) {
+      this.props.deleteButtonOnClick(this.props.id)
+    }
   }
 
   render() {
@@ -50,7 +59,7 @@ class ProjectView extends Component {
             </li>
             <li>
               <button className="btn btn-xs btn-upvote"
-                onClick={()=> {this.props.deleteButtonOnClick(this.props.id)}}>
+                onClick={this.confirmDelete}>
                 <i className="fa fa-trash" />
               </button>
             </li>

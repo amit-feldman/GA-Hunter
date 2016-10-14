@@ -14,6 +14,10 @@ class ProjectList extends Component {
   }
 
   componentDidMount() {
+    this.getProjects();
+  }
+
+  getProjects(){
     request.get('/api/projects')
     .then((res) => {
       this.setState({
@@ -21,14 +25,17 @@ class ProjectList extends Component {
       });
     });
   }
-
   editButtonOnClick(){
     console.log('editButtonOnClick called')
   }
-
+//need to get current user's id and compare it with owner of the clicked
+//project
   deleteButtonOnClick(id){
-    //need to get the project's user_id
-    console.log(`deleteButtonOnClick called on project id: ${id}`)
+    const url = `api/projects/${id}`
+    request.del(url)
+      .end((err, res) => {
+        this.getProjects();
+      });
   }
   render() {
     const projectList = this.state.projects.map((project) => {
