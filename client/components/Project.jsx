@@ -6,6 +6,8 @@ const propTypes = {
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  banner: React.PropTypes.string,
+  description: React.PropTypes.string,
   editButtonOnClick: React.PropTypes.func,
   deleteButtonOnClick: React.PropTypes.func,
 };
@@ -17,8 +19,11 @@ class Project extends Component {
         <ProjectView
           id={this.props.id}
           name={this.props.name}
+          description={this.props.description}
           tagline={this.props.tagline}
           image={this.props.image}
+          banner={this.props.banner}
+          description={this.props.description}
           editButtonOnClick={this.props.editButtonOnClick}
           deleteButtonOnClick={this.props.deleteButtonOnClick}
         />

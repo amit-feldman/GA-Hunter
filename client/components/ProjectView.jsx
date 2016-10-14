@@ -8,6 +8,9 @@ const propTypes = {
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  banner: React.PropTypes.string,
+  description: React.PropTypes.string,
+  url: React.PropTypes.string,
   editButtonOnClick: React.PropTypes.func,
   deleteButtonOnClick: React.PropTypes.func,
 };
@@ -46,17 +49,18 @@ class ProjectView extends Component {
     };
 
     this.confirmDelete = this.confirmDelete.bind(this);
-  }
-
-  confirmDelete(e){
-    e.preventDefault();
-    const option = confirm('Are you sure?');
-    if (option) {
-      this.props.deleteButtonOnClick(this.props.id)
-    }
-
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  confirmDelete(e) {
+    e.preventDefault();
+
+    const option = confirm('Are you sure?');
+
+    if (option) {
+      this.props.deleteButtonOnClick(this.props.id);
+    }
   }
 
   openModal() {
@@ -91,20 +95,24 @@ class ProjectView extends Component {
           </p>
           <ul className="list-inline pull-left">
             <li>
-              <Upvote />
+              <Upvote
+                id={this.props.id}
+              />
             </li>
           </ul>
           <ul className="list-inline pull-right">
             <li>
-              <button className="btn btn-xs btn-upvote"
-                onClick={()=>{this.props.editButtonOnClick(this.props.id)}}>
-                <i className="fa fa-pencil" />
+              <button
+                className="btn btn-xs btn-upvote"
+                onClick={() => { this.props.editButtonOnClick(this.props.id); }}
+              ><i className="fa fa-pencil" />
               </button>
             </li>
             <li>
-              <button className="btn btn-xs btn-upvote"
-                onClick={this.confirmDelete}>
-                <i className="fa fa-trash" />
+              <button
+                className="btn btn-xs btn-upvote"
+                onClick={this.confirmDelete}
+              ><i className="fa fa-trash" />
               </button>
             </li>
           </ul>
@@ -122,7 +130,15 @@ class ProjectView extends Component {
             </button>
           </div>
           <div className="col-lg-12">
-            <ModalView />
+            <ModalView
+              id={this.props.id}
+              url={this.props.url}
+              description={this.props.description}
+              banner={this.props.banner}
+              image={this.props.image}
+              tagline={this.props.tagline}
+              name={this.props.name}
+            />
           </div>
         </Modal>
       </div>
