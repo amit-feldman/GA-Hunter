@@ -1,5 +1,5 @@
 const ProjectDAO = require('../services/ProjectDAO');
-// const ProjectsUsersDAO = require('../services/Projects_UsersDAO');
+const ProjectsUsersDAO = require('../services/Projects_UsersDAO');
 
 class ProjectController {
   static getAll(req, res) {
@@ -20,10 +20,11 @@ class ProjectController {
 
   static createProject(req, res) {
     const projectData = req.body;
-    // console.log('inside creatProject in project controller');
     ProjectDAO.create(projectData)
     .then((project) => {
+      ProjectsUsersDAO.create({project_id: project.id});
       res.status(200).json(project);
+      //should get the current users's id. Then make a new entry with this //project's id
     });
   }
 
