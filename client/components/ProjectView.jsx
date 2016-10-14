@@ -91,7 +91,9 @@ class ProjectView extends Component {
           </p>
           <ul className="list-inline pull-left">
             <li>
-              <Upvote />
+              <Upvote
+                id={this.props.id}
+              />
             </li>
           </ul>
           <ul className="list-inline pull-right">

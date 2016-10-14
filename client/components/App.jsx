@@ -12,10 +12,12 @@ class App extends Component {
 
     this.state = {
       loggedIn: false,
+      currentUser: null,
     };
 
     this.logIn = this.logIn.bind(this);
     this.signOut = this.signOut.bind(this);
+    this.setUser = this.setUser.bind(this);
   }
 
   componentDidMount() {
@@ -29,12 +31,21 @@ class App extends Component {
       });
     }
   }
-
+  setUser(uid) {
+    console.log(uid);
+    console.log('set user called');
+    this.setState({
+      currentUser: uid,
+    });
+    console.log(this.state);
+    console.log('state consoled');
+  }
   signOut() {
     request.post('api/signout')
     .then(() => {
       this.setState({
         loggedIn: false,
+        currentUser: null,
       });
     });
   }
@@ -75,6 +86,10 @@ class App extends Component {
   }
 
   render() {
+    const childrenWithProps = React.Children.map(this.props.children, (child) => {
+      return React.cloneElement(child, { setUser: this.setUser,
+        currentUser: this.state.currentUser });
+    });
     return (
       <div>
         <nav className="navbar navbar-dark">
@@ -99,7 +114,7 @@ class App extends Component {
           </div>
         </nav>
         <div>
-          {this.props.children}
+          {childrenWithProps}
         </div>
         <footer>
           <div className="container">
