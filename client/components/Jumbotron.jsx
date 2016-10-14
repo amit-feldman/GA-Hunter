@@ -8,8 +8,8 @@ function Jumbotron() {
           <div className="col-lg-8">
             <h1>Welcome to GA-Hunter!</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              A forum to share your project with the rest of your GA family!
+              Show off your skills and get feedback from colleagues.
             </p>
           </div>
         </div>
