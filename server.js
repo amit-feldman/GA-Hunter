@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (!process.env.PORT) {
+  require('dotenv').config();
+}
 
 process.env.ENV = process.env.ENV || 'dev';
 
@@ -28,7 +30,7 @@ app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-const port = 3000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Listening on Port: ${port}`);
 });
