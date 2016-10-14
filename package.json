@@ -7,7 +7,7 @@
   "description": "General Assembly's Student Project Showcase",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "start": "node ./server.js",
     "test": "jasmine"
   },
   "repository": {

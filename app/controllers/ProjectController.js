@@ -20,11 +20,13 @@ class ProjectController {
 
   static createProject(req, res) {
     const projectData = req.body;
+
     ProjectDAO.create(projectData)
     .then((project) => {
-      ProjectsUsersDAO.create({project_id: project.id});
+      ProjectsUsersDAO.create({
+        project_id: project.id,
+      });
       res.status(200).json(project);
-      //should get the current users's id. Then make a new entry with this //project's id
     });
   }
 
