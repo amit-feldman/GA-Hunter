@@ -6,6 +6,8 @@ const propTypes = {
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  editButtonOnClick: React.PropTypes.func,
+  deleteButtonOnClick: React.PropTypes.func,
 };
 
 class ProjectView extends Component {
@@ -41,12 +43,14 @@ class ProjectView extends Component {
           </ul>
           <ul className="list-inline pull-right">
             <li>
-              <button className="btn btn-xs btn-upvote">
+              <button className="btn btn-xs btn-upvote"
+                onClick={this.props.editButtonOnClick}>
                 <i className="fa fa-pencil" />
               </button>
             </li>
             <li>
-              <button className="btn btn-xs btn-upvote">
+              <button className="btn btn-xs btn-upvote"
+                onClick={()=> {this.props.deleteButtonOnClick(this.props.id)}}>
                 <i className="fa fa-trash" />
               </button>
             </li>

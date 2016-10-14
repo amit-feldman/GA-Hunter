@@ -9,6 +9,8 @@ class ProjectList extends Component {
     this.state = {
       projects: [],
     };
+    this.editButtonOnClick = this.editButtonOnClick.bind(this);
+    this.deleteButtonOnClick = this.deleteButtonOnClick.bind(this);
   }
 
   componentDidMount() {
@@ -20,14 +22,25 @@ class ProjectList extends Component {
     });
   }
 
+  editButtonOnClick(){
+    console.log('editButtonOnClick called')
+  }
+
+  deleteButtonOnClick(id){
+    //need to get the project's user_id
+    console.log(`deleteButtonOnClick called on project id: ${id}`)
+  }
   render() {
     const projectList = this.state.projects.map((project) => {
       return (
         <Project
           key={project.id}
+          id={project.id}
           name={project.name}
           tagline={project.tagline}
           image={project.image}
+          editButtonOnClick={this.editButtonOnClick}
+          deleteButtonOnClick={this.deleteButtonOnClick}
         />
       );
     });

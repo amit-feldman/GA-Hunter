@@ -6,6 +6,8 @@ const propTypes = {
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  editButtonOnClick: React.PropTypes.func,
+  deleteButtonOnClick: React.PropTypes.func,
 };
 
 class Project extends Component {
@@ -17,6 +19,8 @@ class Project extends Component {
           name={this.props.name}
           tagline={this.props.tagline}
           image={this.props.image}
+          editButtonOnClick={this.props.editButtonOnClick}
+          deleteButtonOnClick={this.props.deleteButtonOnClick}
         />
       </li>
     );
