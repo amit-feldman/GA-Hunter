@@ -8,6 +8,8 @@ const propTypes = {
   name: React.PropTypes.string,
   tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  editButtonOnClick: React.PropTypes.func,
+  deleteButtonOnClick: React.PropTypes.func,
 };
 
 const customStyling = {
@@ -42,6 +44,16 @@ class ProjectView extends Component {
     this.state = {
       open: false,
     };
+
+    this.confirmDelete = this.confirmDelete.bind(this);
+  }
+
+  confirmDelete(e){
+    e.preventDefault();
+    const option = confirm('Are you sure?');
+    if (option) {
+      this.props.deleteButtonOnClick(this.props.id)
+    }
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -84,12 +96,14 @@ class ProjectView extends Component {
           </ul>
           <ul className="list-inline pull-right">
             <li>
-              <button className="btn btn-xs btn-upvote">
+              <button className="btn btn-xs btn-upvote"
+                onClick={()=>{this.props.editButtonOnClick(this.props.id)}}>
                 <i className="fa fa-pencil" />
               </button>
             </li>
             <li>
-              <button className="btn btn-xs btn-upvote">
+              <button className="btn btn-xs btn-upvote"
+                onClick={this.confirmDelete}>
                 <i className="fa fa-trash" />
               </button>
             </li>
