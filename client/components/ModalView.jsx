@@ -17,7 +17,7 @@ class ModalView extends Component {
       <div className="container-fluid modal-container">
         <div className="banner-wrapper">
           <img
-            src={this.props.image}
+            src={this.props.banner}
             alt="Bill Murray 300px square"
             className="modal-banner"
           />

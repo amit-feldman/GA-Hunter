@@ -8,6 +8,8 @@ class Project {
     project,
     upvote,
     created,
+    url,
+    banner,
   }) {
     this.id = id;
     this.name = name;
@@ -17,6 +19,8 @@ class Project {
     this.project = project;
     this.upvote = upvote;
     this.create = created;
+    this.url = url;
+    this.banner = banner;
   }
 }
 

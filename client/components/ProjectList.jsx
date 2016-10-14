@@ -50,9 +50,9 @@ class ProjectList extends Component {
           id={project.id}
           name={project.name}
           tagline={project.tagline}
-          description={project.description}
           image={project.image}
           banner={project.banner}
+          description={project.description}
           url={project.url}
           editButtonOnClick={this.editButtonOnClick}
           deleteButtonOnClick={this.deleteButtonOnClick}

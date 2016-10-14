@@ -132,12 +132,12 @@ class ProjectView extends Component {
           <div className="col-lg-12">
             <ModalView
               id={this.props.id}
-              url={this.props.url}
-              description={this.props.description}
-              banner={this.props.banner}
-              image={this.props.image}
-              tagline={this.props.tagline}
               name={this.props.name}
+              tagline={this.props.tagline}
+              image={this.props.image}
+              banner={this.props.banner}
+              description={this.props.description}
+              url={this.props.url}
             />
           </div>
         </Modal>
