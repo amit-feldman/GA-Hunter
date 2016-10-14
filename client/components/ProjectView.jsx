@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import Upvote from './Upvote.jsx';
+import ModalView from './ModalView.jsx';
 
 const propTypes = {
   id: React.PropTypes.number,
@@ -10,13 +12,39 @@ const propTypes = {
   deleteButtonOnClick: React.PropTypes.func,
 };
 
+const customStyling = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'hsla(0, 0%, 97%, .8)',
+  },
+  content: {
+    position: 'absolute',
+    top: '0rem',
+    left: '0rem',
+    right: '0rem',
+    bottom: '0rem',
+    border: '1px solid #ccc',
+    background: 'hsla(0, 0%, 97%, .8)',
+    overflow: 'auto',
+    WebkitOverflowScrolling: 'touch',
+    borderRadius: '0px',
+    outline: 'none',
+    padding: '1rem',
+  },
+};
+
 class ProjectView extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
-      owner: false,
+      open: false,
     };
+
     this.confirmDelete = this.confirmDelete.bind(this);
   }
 
@@ -26,6 +54,21 @@ class ProjectView extends Component {
     if (option) {
       this.props.deleteButtonOnClick(this.props.id)
     }
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({
+      open: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      open: false,
+    });
   }
 
   render() {
@@ -36,13 +79,14 @@ class ProjectView extends Component {
             src={this.props.image}
             alt="placeholder"
             className="img-project"
+            onClick={this.openModal}
           />
         </div>
         <div className="col-lg-10">
-          <h3 className="project-h3">
+          <h3 className="project-h3" onClick={this.openModal}>
             {this.props.name}
           </h3>
-          <p className="project-p">
+          <p className="project-p" onClick={this.openModal}>
             {this.props.tagline}
           </p>
           <ul className="list-inline pull-left">
@@ -65,6 +109,22 @@ class ProjectView extends Component {
             </li>
           </ul>
         </div>
+        <Modal
+          isOpen={this.state.open}
+          onRequestClose={this.closeModal}
+          style={customStyling}
+        >
+          <div className="col-lg-12">
+            <button
+              onClick={this.closeModal}
+              className="btn btn-danger btn-modal btn-lg pull-left"
+            ><i className="fa fa-times" />
+            </button>
+          </div>
+          <div className="col-lg-12">
+            <ModalView />
+          </div>
+        </Modal>
       </div>
     );
   }
