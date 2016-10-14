@@ -23,7 +23,7 @@ class UpvoteView extends Component {
     // this.setState({
       // user_id: currentUser,
     // })
-    const apiUrl = 'http://localhost:3000/api/upvotes';
+    const apiUrl = '/api/upvotes';
     const { user_id, project_id } = this.state;
     console.log(this.state);
     console.log(this.props);
