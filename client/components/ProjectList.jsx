@@ -25,8 +25,9 @@ class ProjectList extends Component {
       });
     });
   }
-  editButtonOnClick(){
-    console.log('editButtonOnClick called')
+  editButtonOnClick(id){
+    //should first reroute to new project form
+    console.log(`editButtonOnClick called with id: ${id}`)
   }
 //need to get current user's id and compare it with owner of the clicked
 //project

@@ -53,7 +53,7 @@ class ProjectView extends Component {
           <ul className="list-inline pull-right">
             <li>
               <button className="btn btn-xs btn-upvote"
-                onClick={this.props.editButtonOnClick}>
+                onClick={()=>{this.props.editButtonOnClick(this.props.id)}}>
                 <i className="fa fa-pencil" />
               </button>
             </li>
