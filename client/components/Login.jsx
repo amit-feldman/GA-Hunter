@@ -27,7 +27,7 @@ class Login extends Component {
   }
 
   handleSubmit() {
-    const url = 'http://localhost:3000/api/login';
+    const url = '/api/login';
     const { email, password } = this.state;
 
     request.post(url)

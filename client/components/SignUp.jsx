@@ -27,7 +27,7 @@ class SignUp extends Component {
   }
 
   handleSubmit() {
-    const url = 'http://localhost:3000/api/signup';
+    const url = '/api/signup';
     const { name, email, password, course } = this.state;
 
     if (name && email && password && course) {

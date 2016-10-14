@@ -30,7 +30,7 @@ class Form extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const apiUrl = 'http://localhost:3000/api/projects';
+    const apiUrl = '/api/projects';
     const { name, description, tagline, image, url, banner } = this.state;
 
     request.post(apiUrl)
