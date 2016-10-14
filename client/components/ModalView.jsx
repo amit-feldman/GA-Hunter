@@ -25,11 +25,40 @@ class ModalView extends Component {
           <p className="lead">
             {this.props.tagline}
           </p>
-          <Upvote />
+          <ul className="list-inline">
+            <Upvote />
+            <a
+              className="btn btn-primary btn-get btn-xs"
+              href={this.props.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >Get it
+            </a>
+          </ul>
         </div>
-        <p>
-          {this.props.description}
-        </p>
+        <div className="col-lg-6">
+          <h3 className="title">
+            Project description:
+          </h3>
+          <p>
+            {this.props.description}
+          </p>
+        </div>
+        <div>
+          <h3 className="title">
+            Comments:
+          </h3>
+          <div className="col-lg-6">
+            <textarea
+              className="form-control comment-box"
+              placeholder="Add interesting comment"
+            />
+            <button
+              className="btn btn-danger btn-comment pull-right"
+            >Post Comment
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
