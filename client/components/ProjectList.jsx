@@ -9,6 +9,7 @@ class ProjectList extends Component {
     this.state = {
       projects: [],
     };
+
     this.editButtonOnClick = this.editButtonOnClick.bind(this);
     this.deleteButtonOnClick = this.deleteButtonOnClick.bind(this);
   }
@@ -17,7 +18,7 @@ class ProjectList extends Component {
     this.getProjects();
   }
 
-  getProjects(){
+  getProjects() {
     request.get('/api/projects')
     .then((res) => {
       this.setState({
@@ -25,19 +26,22 @@ class ProjectList extends Component {
       });
     });
   }
-  editButtonOnClick(id){
-    //should first reroute to new project form
-    console.log(`editButtonOnClick called with id: ${id}`)
+
+  editButtonOnClick(id) {
+    // should first reroute to new project form
+    console.log(`editButtonOnClick called with id: ${id}`);
   }
-//need to get current user's id and compare it with owner of the clicked
-//project
-  deleteButtonOnClick(id){
-    const url = `api/projects/${id}`
+
+  // need to get current user's id and compare it with owner of the clicked
+  // project
+  deleteButtonOnClick(id) {
+    const url = `api/projects/${id}`;
     request.del(url)
-      .end((err, res) => {
-        this.getProjects();
-      });
+    .end(() => {
+      this.getProjects();
+    });
   }
+
   render() {
     const projectList = this.state.projects.map((project) => {
       return (
@@ -46,7 +50,10 @@ class ProjectList extends Component {
           id={project.id}
           name={project.name}
           tagline={project.tagline}
+          description={project.description}
           image={project.image}
+          banner={project.banner}
+          url={project.url}
           editButtonOnClick={this.editButtonOnClick}
           deleteButtonOnClick={this.deleteButtonOnClick}
         />
