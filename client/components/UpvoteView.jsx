@@ -11,7 +11,7 @@ class UpvoteView extends Component {
     super(props);
 
     this.state = {
-      user_id: this.props.user_id,
+      user_id: this.props.currentUser,
       project_id: this.props.project_id,
     };
     this.handleUpvote = this.handleUpvote.bind(this);

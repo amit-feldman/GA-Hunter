@@ -35,6 +35,7 @@ class App extends Component {
     console.log(uid);
     console.log('set user called');
     this.setState({
+      loggedIn: true,
       currentUser: uid,
     });
     console.log(this.state);
