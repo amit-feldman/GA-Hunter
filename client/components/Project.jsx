@@ -4,8 +4,10 @@ import ProjectView from './ProjectView.jsx';
 const propTypes = {
   id: React.PropTypes.number,
   name: React.PropTypes.string,
-  description: React.PropTypes.string,
+  tagline: React.PropTypes.string,
   image: React.PropTypes.string,
+  editButtonOnClick: React.PropTypes.func,
+  deleteButtonOnClick: React.PropTypes.func,
 };
 
 class Project extends Component {
@@ -15,8 +17,10 @@ class Project extends Component {
         <ProjectView
           id={this.props.id}
           name={this.props.name}
-          description={this.props.description}
+          tagline={this.props.tagline}
           image={this.props.image}
+          editButtonOnClick={this.props.editButtonOnClick}
+          deleteButtonOnClick={this.props.deleteButtonOnClick}
         />
       </li>
     );

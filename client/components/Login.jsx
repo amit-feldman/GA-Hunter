@@ -35,13 +35,13 @@ class Login extends Component {
       email: email,
       password: password,
     })
-    // .then((res) => {
-    //   const currentUser = res.body.id;
-    //   console.log(currentUser);
-    //   console.log('currentUser');
-    //   console.log(this.props);
-    //   this.props.setUser(currentUser);
-    // })
+    .then((res) => {
+      const currentUser = res.body.id;
+      console.log(currentUser);
+      console.log('currentUser');
+      console.log(this.props);
+      this.props.setUser(currentUser);
+    })
     .end(() => {
       this.props.router.push('/');
     });
