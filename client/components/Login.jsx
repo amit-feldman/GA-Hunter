@@ -42,7 +42,7 @@ class Login extends Component {
       console.log(this.props);
       this.props.setUser(currentUser);
     })
-    .end(() => {
+    .then(() => {
       this.props.router.push('/');
     });
   }

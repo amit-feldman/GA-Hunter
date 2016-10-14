@@ -35,6 +35,7 @@ class App extends Component {
     console.log(uid);
     console.log('set user called');
     this.setState({
+      loggedIn: true,
       currentUser: uid,
     });
     console.log(this.state);
@@ -87,8 +88,7 @@ class App extends Component {
 
   render() {
     const childrenWithProps = React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, { setUser: this.setUser,
-        currentUser: this.state.currentUser });
+      return React.cloneElement(child, { setUser: this.setUser });
     });
     return (
       <div>
