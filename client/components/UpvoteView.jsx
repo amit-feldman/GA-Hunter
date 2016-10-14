@@ -18,10 +18,15 @@ class UpvoteView extends Component {
   }
   handleUpvote(e) {
     e.preventDefault();
-
+    console.log(this.props);
+    // const currentUser = this.props.getCurrentUser();
+    // this.setState({
+      // user_id: currentUser,
+    // })
     const apiUrl = 'http://localhost:3000/api/upvotes';
     const { user_id, project_id } = this.state;
-
+    console.log(this.state);
+    console.log(this.props);
     request.post(apiUrl)
     .send({
       user_id: user_id,

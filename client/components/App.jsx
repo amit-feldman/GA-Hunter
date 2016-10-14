@@ -88,8 +88,7 @@ class App extends Component {
 
   render() {
     const childrenWithProps = React.Children.map(this.props.children, (child) => {
-      return React.cloneElement(child, { setUser: this.setUser,
-        currentUser: this.state.currentUser });
+      return React.cloneElement(child, { setUser: this.setUser });
     });
     return (
       <div>
