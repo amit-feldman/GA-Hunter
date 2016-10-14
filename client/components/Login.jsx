@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router';
 import request from 'superagent';
 
+const propTypes = {
+  setUser: React.PropTypes.func,
+};
+
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       email: '',
@@ -31,6 +35,13 @@ class Login extends Component {
       email: email,
       password: password,
     })
+    // .then((res) => {
+    //   const currentUser = res.body.id;
+    //   console.log(currentUser);
+    //   console.log('currentUser');
+    //   console.log(this.props);
+    //   this.props.setUser(currentUser);
+    // })
     .end(() => {
       this.props.router.push('/');
     });
@@ -44,7 +55,7 @@ class Login extends Component {
           <div>
             <input
               name="email"
-              type="text"
+              type="email"
               className="form-control"
               onChange={this.handleChange}
               placeholder="email"
@@ -72,5 +83,7 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = propTypes;
 
 export default withRouter(Login);
