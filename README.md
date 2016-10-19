@@ -6,82 +6,45 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisities
+## Problem Statement:
 
-What things you need to install the software and how to install them
+Movie and TV platforms’ recommender systems are a hit or miss (Partly caused by all of the anime films watched by one of the nine friends who share your account.)  
 
-```
-Give examples
-```
+Trailer Park allows users to create a collection of trailers by simply searching movies and shows and saving them to a personalized library.  Users can also curate Movie/TV playlists based on other Trailer Park users and their Trailer Libraries.
+
+
+## User Scenario
+
+TODO: Add user scenario
+
+## Wireframe
+
+TODO: Add Wireframe
 
 ### Installing
 
 A step by step series of examples that tell you have to get a development env running
 
-Say what the step will be
-
 ```
-Give the example
+TODO: Add instructions
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+* **HTML5**
+* **CSS3**
+* **React**
+* **Express**
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Amit Feldman**
+* **Mark Robertson**
+* **Tom Mulroy**
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* **David Druker**
+* **Andrew Madden**
+* **Will Shaw**
